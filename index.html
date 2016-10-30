@@ -184,7 +184,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJs/">AngularJs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSON/">JSON</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML/">XML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seaJs/">seaJs</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJs/">AngularJs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSON/">JSON</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSONP/">JSONP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node/">Node</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML/">XML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/artTemplate/">artTemplate</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seaJs/">seaJs</a></li></ul>
                     </div>
                 </section>
                 
@@ -263,6 +263,1001 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-NodeJs-3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/15/NodeJs-3/" class="article-date">
+      <time datetime="2016-10-15T09:06:37.000Z" itemprop="datePublished">2016-10-15</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/15/NodeJs-3/">NodeJs-3</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div></pre></td><td class="code"><pre><div class="line">## API</div><div class="line"></div><div class="line">- ECMAScript</div><div class="line">- Globals</div><div class="line">  + setImmediate(callback[, ...args])</div><div class="line">  + setInterval(callback, delay[, ...args])</div><div class="line">  + setTimeout(callback, delay[, ...args])</div><div class="line">  + clearImmediate(immediateObject)</div><div class="line">  + clearInterval(intervalObject)</div><div class="line">  + clearTimeout(timeoutObject)</div><div class="line">  + console</div><div class="line">  + global</div><div class="line">    * 类似于 window 对象，在整个模块系统中共享一个 global</div><div class="line">    * 没有全局作用域</div><div class="line">  + process</div><div class="line">    * 进程对象：能获取当前运行的 node 程序的一些信息</div><div class="line">    * 例如向当前终端输出一些内容，或者接收终端中用户的输入</div><div class="line">  + Class: Buffer（是Node中为了处理二进制数据做的一个对象）</div><div class="line">    * Buffer 是一个类似于数组的结构对象</div><div class="line">    * Buffer 数组结构是一个由 16进制 表现形式的一个一个的单位元素</div><div class="line">    * 例如，读取文件，默认不指定编码的情况下读取到的就是一个 Buffer对象</div><div class="line">    * 在这里只需要知道 Buffer（二进制数据）和 字符之间有编码（字典）转换关系</div><div class="line">    * 所谓的编码其实就是咱们认识的字典</div><div class="line">    * iconv-lite 内置了很多的字典</div><div class="line">  + 模块系统</div><div class="line">    * 封装细节，对外暴露功能</div><div class="line">    * module.exports</div><div class="line">    * require()</div><div class="line">    * exports</div><div class="line">  + 模块内属性成员</div><div class="line">    * __dirname 和 __filename</div><div class="line">- Path</div><div class="line">  + path.basename(path[, ext])</div><div class="line">  + path.dirname(path)</div><div class="line">  + path.extname(path)</div><div class="line">  + path.isAbsolute(path)</div><div class="line">  + path.join([...paths])</div><div class="line">- File System</div><div class="line">- HTTP</div><div class="line">- Query String</div><div class="line">  + querystring.parse(str)</div><div class="line">  + 可以把传入的 `key1=value&amp;key2=value&amp;key3=value...` 的形式解析成一个对象</div><div class="line">- URL</div><div class="line">  + url.parse()</div><div class="line"></div><div class="line">## 1. HTTP</div><div class="line"></div><div class="line">HyperText Transfer Protocol 超文本传输协议</div><div class="line"></div><div class="line">### 1.1 **经典面试题：当你在地址栏输入地址敲回车之后发生的事情**</div><div class="line"></div><div class="line">![访问网站](img/LSBAWS_HTTP_request_response.png)</div><div class="line"></div><div class="line">1. 用户在浏览器地址栏中输入网站域名</div><div class="line">2. 浏览器拿到该域名自动去请求 **DNS服务器查询** 用户输入的域名对应的 `ip` 地址</div><div class="line">3. 浏览器拿到 `ip` 地址之后，通过ip地址+端口号（HTTP默认80）和服务器建立连接（通过 **三次握手** ）</div><div class="line">2. 三次握手建立连接成功之后</div><div class="line">5. 浏览器将用户输入的 `url` 地址通过 `HTTP` 协议包装成 **请求报文** ，然后通过 `Socket（服务器ip地址和端口号）` 发送到服务器</div><div class="line">6. 当HTTP服务器接收到客户端浏览器发送过来的请求报文时候，按照 `HTTP` 协议将请求报文解析出来</div><div class="line">7. 然后服务器拿到请求报文中的请求信息（例如请求路径url），做相应的业务逻辑处理操作</div><div class="line">8. 当业务逻辑处理完毕之后，服务器将要发送给客户端的数据按照 `HTTP` 协议包装成 **响应报文**</div><div class="line">9. 然后服务器将响应报文数据发送给客户端浏览器</div><div class="line">10. 当浏览器接收到服务器发送给自己的响应报文数据的时候，浏览器根据 `HTTP` 协议将报文内容解析出来</div><div class="line">11. 浏览器拿到响应报文体中的数据开始 **解析渲染html、css，执行 JavaScript**</div><div class="line">12. 如果在解析的过程（从上到下）中，发现有外链的标签（link、css、img）</div><div class="line">13. 浏览器会自动对该标签指向的 路径地址 发起新的请求，同上。</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">### 1.2 浏览器的本质作用</div><div class="line"></div><div class="line">- **收发数据**</div><div class="line">- **包装和解析 HTTP 报文数据**</div><div class="line">- **渲染 HTML、CSS，解析执行 JavaScript**</div><div class="line"></div><div class="line">## 2. 使用 http 模块构建 HTTP 服务</div><div class="line"></div><div class="line"></div><div class="line">### 2.1 基本 API</div><div class="line"></div><div class="line">- Server</div><div class="line">  + http.createServer([requestListener])</div><div class="line">  + Event: &apos;request&apos;</div><div class="line">  + Event: &apos;close&apos;</div><div class="line">  + Event: &apos;connection&apos;</div><div class="line">  + server.close([callback])</div><div class="line">  + server.listen([port][, hostname][, backlog][, callback])</div><div class="line"></div><div class="line">- Request</div><div class="line">  + Event: &apos;data&apos;</div><div class="line">  + Event: &apos;close&apos;</div><div class="line">  + message.headers</div><div class="line">  + message.httpVersion</div><div class="line">  + message.method</div><div class="line">  + message.url</div><div class="line"></div><div class="line">- Response</div><div class="line">  + response.write(chunk[, encoding][, callback])</div><div class="line">  + response.end([data][, encoding][, callback])</div><div class="line">  + response.writeHead(statusCode[, statusMessage][, headers])</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-NodeJs-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/09/NodeJs-2/" class="article-date">
+      <time datetime="2016-10-09T07:05:14.000Z" itemprop="datePublished">2016-10-09</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/09/NodeJs-2/">NodeJs-2</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div></pre></td><td class="code"><pre><div class="line">## 1. Node 中的 JavaScript</div><div class="line"></div><div class="line">- ECMAScript</div><div class="line">- Class：Buffer</div><div class="line">- 定时器函数和清除定时器函数</div><div class="line">- global</div><div class="line">- process</div><div class="line">- console</div><div class="line">- 模块内成员</div><div class="line">  + __dirname 和 __filename</div><div class="line">  + exports</div><div class="line">  + module</div><div class="line">  + require</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">## 2. 模块系统</div><div class="line"></div><div class="line">### 2.1 模块系统解决方案</div><div class="line"></div><div class="line">Node 基于 CommonJS 规范实现了自己的一套模块系统规范。</div><div class="line"></div><div class="line">CommonJS 不仅仅包含 模块定义规范，它还给 JavaScript 语言没有触及到服务器领域制定了一些规范。</div><div class="line">例如：二进制数据操作、文件操作、网络操作、进程操作、模块系统规范。。。</div><div class="line"></div><div class="line">- module.exports</div><div class="line">- exports</div><div class="line">- requrie</div><div class="line"></div><div class="line">Node 中的模块，一共分为三类形式，具体如下：</div><div class="line"></div><div class="line">### 2.2 文件模块</div><div class="line"></div><div class="line">以 `./` 或 `../` 开头的模块标识就是文件模块，一般就是用户编写的。</div><div class="line"></div><div class="line">### 2.3 核心模块</div><div class="line"></div><div class="line">- 核心模块就是 node 内置的模块，需要通过唯一的标识名称来进行获取。</div><div class="line">- 每一个核心模块基本上都是暴露了一个对象，里面包含一些方法供我们使用</div><div class="line">- 一般在加载核心模块的时候，变量的起名最好就和核心模块的标识名同名即可</div><div class="line">  + 例如：`const fs = require(&apos;fs&apos;)`</div><div class="line">- 核心模块本质上也是文件模块</div><div class="line">  + 核心模块已经被编译到了 node 的可执行程序，一般看不到</div><div class="line">  + 可以通过查看 node 的源码看到核心模块文件</div><div class="line">  + 核心模块也是基于 CommonJS 模块规范</div><div class="line"></div><div class="line">每一个模块都提供了单一的功能，以下是常用的核心模块：</div><div class="line"></div><div class="line">- fs            文件操作</div><div class="line">- http          http服务</div><div class="line">- net           Socket网络编程</div><div class="line">- os            操作系统相关</div><div class="line">- path          路径操作</div><div class="line">- querystring   处理查询字符串</div><div class="line">- url           处理url路径</div><div class="line">- util          工具函数</div><div class="line"></div><div class="line">### 2.4 第三方模块</div><div class="line"></div><div class="line">一般就是通过 `npm install` 安装的模块就是第三方模块。</div><div class="line"></div><div class="line">加载规则如下：</div><div class="line"></div><div class="line">- 如果不是文件模块，也不是核心模块</div><div class="line">- node 会去 node_modules 目录中找（找跟你引用的名称一样的目录），例如这里 `require(&apos;underscore&apos;)`</div><div class="line">- 如果在 node_modules 目录中找到 `underscore` 目录，则找该目录下的 `package.json` 文件</div><div class="line">- 如果找到 `package.json` 文件，则找该文件中的 `main` 属性，拿到 main 指定的入口模块</div><div class="line">- 如果过程都找不到，node 则取上一级目录下找 `node_modules` 目录，规则同上。。。</div><div class="line">- 如果一直找到代码文件的根路径还找不到，则报错。。。</div><div class="line"></div><div class="line">注意：对于第三方模块，我们都是 `npm install` 命令进行下载的，就放到项目根目录下的 `node_modules` 目录。</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">## 3. 包与npm</div><div class="line"></div><div class="line">### 3.1 包</div><div class="line"></div><div class="line">包其实就是一些模块组织到一起，放到一个目录中的一个称呼，叫包或者模块都行。</div><div class="line"></div><div class="line">### 3.2 package.json</div><div class="line"></div><div class="line">包说明文件。</div><div class="line"></div><div class="line">### 3.3 npm</div><div class="line"></div><div class="line">- 本地安装</div><div class="line">  + `npm install 包名 [--save]`</div><div class="line">  + 本地安装一般用于项目的功能开发，我们会主动的去加载这个模块包，然后使用里面提供的一系列功能</div><div class="line">  + 例如 underscore</div><div class="line">- 全局安装</div><div class="line">  + 全局安装一般是安装一些工具性的东西</div><div class="line">  + `npm install 包名 --global|-g`</div><div class="line">  + less</div><div class="line">  + http-server</div><div class="line">    * 可以实现快速启动一个服务器</div><div class="line">  + browser-sync</div><div class="line">    * https://www.browsersync.io/</div><div class="line">    * 前端可视化开发</div><div class="line">  + nodemon</div><div class="line">    * 可以实现文件代码改变自动重启</div><div class="line">  + 使用 `nom root -g` 可以查看全局命令行工具安装的路径</div><div class="line"></div><div class="line">以上这些东西只是片面的，最主要就是要学会搜索以及查看文档。</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">## 4. 文件操作</div><div class="line"></div><div class="line">### 4.1 path</div><div class="line"></div><div class="line">- path.basename(path[, ext])：获取文件名部分</div><div class="line">- path.dirname(path)：获取目录部分</div><div class="line">- path.extname(path)：获取扩展名部分</div><div class="line">- path.isAbsolute(path)：判断是否是绝对路径</div><div class="line">- path.join([...paths])：将多个路径拼接为一个路径</div><div class="line"></div><div class="line">### 4.2 同步调用和异步调用</div><div class="line"></div><div class="line">fs模块对文件的几乎所有操作都有同步和异步两种形式，例如：`readFile()` 和 `readFileSync()`。</div><div class="line"></div><div class="line">同步与异步文件系统调用的区别</div><div class="line"></div><div class="line">- 同步调用立即执行，会阻塞后续代码继续执行，如果想要捕获异常需要使用 `try-catch`</div><div class="line">- 异步调用不会阻塞后续代码继续执行，需要回调函数作为额外的参数，通常包含一个错误作为回调函数的第一个参数</div><div class="line">- 异步调用通过判断第一个err对象来处理异常</div><div class="line">- 异步调用结果往往通过回调函数来进行获取</div><div class="line"></div><div class="line">Node 只在文件IO操作中，提供了同步调用和异步调用两种形式，两者可以结合使用，</div><div class="line">但是推荐能使用异步调用解决问题的情况下，少用同步调用。</div><div class="line"></div><div class="line">### 4.3 文件操作常用API</div><div class="line"></div><div class="line">- fs.writeFile(file, data, callback)：文件写入</div><div class="line">- fs.appendFile(file, data, callback)：文件追加</div><div class="line">- fs.readFile(file[, options], callback)：文件读取</div><div class="line">- fs.unlink(path, callback)：删除文件</div><div class="line">- fs.stat(path, callback)：获取文件信息</div><div class="line">- fs.access(path, callback)：验证文件路径是否存在</div><div class="line">- fs.rename(oldPath, newPath, callback)：重命名或移动文件</div><div class="line"></div><div class="line">### 4.4 目录操作常用API</div><div class="line"></div><div class="line">- fs.mkdir(path, callback)：创建一个目录</div><div class="line">- fs.rmdir(path, callback)：删除一个空目录</div><div class="line">- fs.readdir(path, callback)：读取一个目录</div><div class="line">- fs.rename(oldPath, newPath, callback)：重命名或移动目录</div><div class="line"></div><div class="line">### 4.5 监视</div><div class="line"></div><div class="line">- fs.watchFile(filename[, options], listener)</div><div class="line">- fs.watch(filename[, options][, listener])</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-NodeJs-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/10/06/NodeJs-1/" class="article-date">
+      <time datetime="2016-10-06T05:59:34.000Z" itemprop="datePublished">2016-10-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/06/NodeJs-1/">NodeJs-1</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div></pre></td><td class="code"><pre><div class="line">## 1. Node.js 介绍</div><div class="line"></div><div class="line">以下简称 Node。</div><div class="line"></div><div class="line">&gt; 划时代意义的 Node ，开启了大前端时代</div><div class="line">&gt; node 让前端进入了工业自动化时代</div><div class="line">&gt; node 还让原来的小前端可以有机会踏入后端开发领域，使用 JavaScript 语言进行服务器编程</div><div class="line">&gt; 总而言之：学习了 Node ，就开启了前端工程师的 **全栈开发** 之旅</div><div class="line"></div><div class="line">### 3.1 客户端和服务器</div><div class="line"></div><div class="line">### 3.2 几个问题</div><div class="line"></div><div class="line">- 什么是 JavaScript</div><div class="line">  + 一种运行在浏览器端的脚本语言。</div><div class="line">  + JavaScript + DOM + BOM</div><div class="line">  + ECMAScript + W3C</div><div class="line">  + ECMAScript + BOM + DOM</div><div class="line">  + BOM和DOM等都是浏览器环境提供的接口API，供 JavaScript 语言来调用。</div><div class="line"></div><div class="line">- JavaScript 和 ECMAScript 是什么关系</div><div class="line">  + ECMAScript 是 JavaScript 语言的标准规范</div><div class="line">    * var、if-else、for、Object、Array、String。。。</div><div class="line">  + JavaScript 是 ECMAScript 标准规范的一个实现</div><div class="line"></div><div class="line">- 浏览器和 JavaScript 是什么关系</div><div class="line">  + JavaScript 是运行在浏览器环境中的</div><div class="line">  + 寄宿关系</div><div class="line">  + 浏览器就是 JavaScript 的一个执行环境</div><div class="line"></div><div class="line">- 浏览器中的 JavaScript 可以做什么</div><div class="line">  + DOM操作、表单验证、动画、ajax 请求</div><div class="line"></div><div class="line">- 从功能角度 浏览器中的 JavaScript 和其它语言有什么差别</div><div class="line">  + 弱类型</div><div class="line">  + 浏览器中的 JavaScript 专注于处理 GUI 编程（图形界面）</div><div class="line">  + 文件操作</div><div class="line">    * HTML5中有一个 FileReader（只能读取用户通过file类型的input标签选择的文件）</div><div class="line">    * 浏览器中的 JavaScript 没有主动操作文件的权限</div><div class="line">  + 网络IO</div><div class="line">    * 接收网络中传输过来的数据，处理网络中传输过来的数据，发对方发送响应</div><div class="line"></div><div class="line">- ECMAScript 只可以运行在浏览器中吗</div><div class="line">  + JavaScript 不仅仅可以运行在浏览器环境中</div><div class="line">  + 也可以运行在别的环境、平台</div><div class="line"></div><div class="line">### 3.3 什么是Node</div><div class="line"></div><div class="line">[Node官方网站](https://nodejs.org/en/)</div><div class="line"></div><div class="line">- Node.js® is a JavaScript runtime built on Chrome&apos;s V8 JavaScript engine.</div><div class="line">  + NodeJS 是一个构建与 Chrome V8 JavaScript 解析引擎之上的一个运行时环境</div><div class="line">  + Chrome V8 开源的</div><div class="line">  + Chrome V8 引擎在所有浏览器的 JavaScript 解析引擎中是最快的</div><div class="line">  + [维基百科 - JavaScript引擎](https://zh.wikipedia.org/wiki/JavaScript%E5%BC%95%E6%93%8E)</div><div class="line"></div><div class="line">- Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.</div><div class="line">  + event-driven：事件驱动</div><div class="line">  + non-blocking I/O model：非阻塞IO模型</div><div class="line">  + lightweight and efficient：轻量和高效</div><div class="line">  + Node 本身知识提供了一些系统级别操作API</div><div class="line"></div><div class="line">- Node.js&apos; package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</div><div class="line">  + package ecosystem, npm：包管理系统 npm</div><div class="line">  + largest ecosystem of open source libraries in the world.</div><div class="line">    * 目前世界上最大的开源库生态系统</div><div class="line">    * 50W + 就好比 Sublime编辑器一样，本身只提供很简单的功能</div><div class="line">    * 大部分都需要依靠社区中的插件、包来开发咱们的应用程序</div><div class="line">    * 如果英语好，占优势</div><div class="line">    * npm 两层含义：</div><div class="line">      - 第一是一用来托管基于Node开发的包的</div><div class="line">      - 第二是一个命令行工具，可以用来下载npm网站上托管的Node包</div><div class="line">      - 有了 npm，就会成为完全傻瓜式的开发</div><div class="line">      - 直接拿来解决你的问题就可以了，能让你更加专注于业务的处理</div><div class="line"></div><div class="line">- Node 是基于 Chrome V8 解析引擎之上构建的一个 JavaScript 运行时环境，或者说平台</div><div class="line">  + 在 Node 中，可以使用 JavaScript 语言进行编程吧</div><div class="line">- Node 能解析和执行 JavaScript（ECMAScript） 代码</div><div class="line">- Node 是一个平台，让 JavaScript 可以脱离浏览器环境运行</div><div class="line">- Node 自身使用 c++ 语言写出了很多系统级别相关的 API，暴露了一些 JavaScript 环境 API</div><div class="line">  + 例如文件操作</div><div class="line">  + 网络操作</div><div class="line">  + 。。。</div><div class="line">- 使用 Node 可以轻松的进行文件系统访问、HTTP 服务器开发等功能</div><div class="line">- 免费开源</div><div class="line"></div><div class="line">### 3.4 使用 Node 可以做什么</div><div class="line"></div><div class="line">![node-npm](img/node-npm.png)</div><div class="line"></div><div class="line">- 高性能的网站服务器</div><div class="line">- 实时多人游戏后台服务器</div><div class="line">- 简单易用的命名行应用程序</div><div class="line">  + gulp、less、bower、fis、http-server</div><div class="line">  + ant、ruby、.net nuget</div><div class="line">- 高大上的桌面应用程序</div><div class="line">  + 使用 Web 技术 作为解决方案</div><div class="line">  + electron Linus + Max + Windows</div><div class="line">- 底层的物联网开发</div><div class="line">  + 树莓派</div><div class="line">- 移动开发</div><div class="line">  + Ionic 安卓 IOS</div><div class="line">  + 使用 Web 技术作为解决方案</div><div class="line"></div><div class="line">### 3.5 Node 的特点</div><div class="line"></div><div class="line">- Single Thread：单线程</div><div class="line">- event-driven：事件驱动</div><div class="line">- non-blocking I/O model：非阻塞IO模型</div><div class="line">  + 文件IO、网络IO 基本上都是异步的</div><div class="line">  + 所以在 Node 中会看到各种各样的花式回调</div><div class="line">- Node 采用的是 事件驱动和非阻塞IO模型 使它本身非常的轻量级和高效。</div><div class="line">- 开源免费、跨平台</div><div class="line"></div><div class="line">### 3.6 Node 的诞生历程</div><div class="line"></div><div class="line">&lt;img src=&quot;img/maxresdefault.jpg&quot; width=&quot;500&quot; alt=&quot;&quot;&gt;</div><div class="line"></div><div class="line">&lt;img src=&quot;img/ryan_dahl.jpg&quot; alt=&quot;&quot;&gt;</div><div class="line"></div><div class="line">- Node 的作者：`Ryan Dahl`</div><div class="line">- 2004年还在纽约读数学系博士</div><div class="line">- 2006年退学（世界那么大，我想去看看），生活所迫，选择了码农</div><div class="line">- 接项目、工作、旅行，两年之后，成为了高性能Web服务器的专家</div><div class="line">- 2009年5月，Ryan Dahl 在 github 上发布了最初的 Node 版本</div><div class="line">- 2010年底，Ryan Dahl 加入 Joyent 公司全职负责 Node 的发展</div><div class="line">- 2011年7月，Node 在微软的支持下发布了 Windows 版</div><div class="line">- 2012年1月底，Ryan Dahl 将掌门人身份转交给了 Isaac Z.Schlueter，自己转向一些研究项目</div><div class="line">- 2014年12月，多为重量级Node开发者不满 Joyent 对 Node 的管理，自立门户创建了 `io.js`</div><div class="line">- 2015年9月，Node 与 io.js 合并，Node 的版本从 0.12.7 直接升级到了 4.0.0</div><div class="line">- 合并后的 io.js 和 Node 在 Joyent 公司的维护下并行了两个版本：</div><div class="line">  + 一个是4.x.x  还是原来的 Node，这个版本是稳定版</div><div class="line">  + 一个是5.x.x，目前已经更新到了 6.8.1，其实就是 io.js，最新特性版，不建议生产环境使用</div><div class="line">- Node 计划在 2016 年 10月底正式发布 Node 7.0</div><div class="line">  + 7.0 已经最大限度的支持了很多的 ES6 新语法</div><div class="line">  + 而且提高了整体的执行性能，提供了一些别的API</div><div class="line"></div><div class="line">### 3.7 为什么要学习 Node</div><div class="line"></div><div class="line">- Node 打破了过去 JavaScript 只能在浏览器中运行的局面</div><div class="line">- 前后端编程环境统一，大大降低了前后端语言切换的代价</div><div class="line">- 全栈开发工程师</div><div class="line">  + 后端开发工程师</div><div class="line">  + 前端开发工程师</div><div class="line">  + 移动端开发工程师</div><div class="line">- 前端 + 后端</div><div class="line"></div><div class="line">### 3.8 总结</div><div class="line"></div><div class="line">Node 是基于 `Chrome V8` 引擎，一个 JavaScript 运行时环境。</div><div class="line">Node 可以解析和执行 JavaScript（ECMAScript） 脚本代码，</div><div class="line">而且提供了很多系统级别的API（文件读写、进程管理、网络通信）。</div><div class="line"></div><div class="line">Node 不是一个新的语言，而且一个运行时环境，类似于浏览器环境或者说平台，</div><div class="line">可以用来解析和执行 JavaScript 语言代码。</div><div class="line"></div><div class="line">JavaScript 长久以来一直被限制在浏览器的沙箱中运行，</div><div class="line">它的能力取决于浏览器中间层提供的支持多少。</div><div class="line">Node 将高性能的 V8 带到了服务器端，使 JavaScript 也可以开发出实时高性能的服务器。</div><div class="line">在 Node 中，不再与CSS样式表，DOM树打交道，</div><div class="line">可以随意的访问本地文件，搭建 WebSocket 服务器，连接数据库等系统级底层操作。</div><div class="line">Node `不处理 UI，只关心数据`，无论是本地数据还是网络数据。</div><div class="line">前后端编程统一，大大降低了前后端编程切换的代码。</div><div class="line"></div><div class="line">对于前端工程师而言，自己熟悉的 JavaScript 如今竟然可以在另一个地方大放异彩，</div><div class="line">不谈其他原因，仅仅因为好奇，也值得去关注和探究它。</div><div class="line"></div><div class="line">JavaScript 全栈开发工程师，JavaScript 语言的责任已经越来越重了。</div><div class="line"></div><div class="line">### 3.9 Node 学习资源推荐</div><div class="line"></div><div class="line">- 深入浅出Node.js</div><div class="line">- Node.js实战（第一季）</div><div class="line">- Node与Express开发</div><div class="line">- [菜鸟教程 - Node.js](http://www.runoob.com/nodejs/nodejs-tutorial.html)</div><div class="line">- [七天学会NodeJS](https://nqdeng.github.io/7-days-nodejs/)</div><div class="line">- [Node中文社区](https://cnodejs.org/)</div><div class="line">- [Node V4.2.1中文文档](http://nodeapi.ucdok.com/#/api/)</div><div class="line">- [Node.js 包教不包会](https://github.com/alsotang/node-lessons)</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">## 4. 安装与配置 Node 开发环境</div><div class="line"></div><div class="line">### 4.1 关于版本的选择</div><div class="line"></div><div class="line">### 4.2 普通方式安装</div><div class="line"></div><div class="line">- 下载地址：`https://nodejs.org/en/download/`</div><div class="line">- 下一步下一步即可</div><div class="line"></div><div class="line">### 4.3 使用 `nvm` 安装和管理多个 node 版本</div><div class="line"></div><div class="line">- nvm node version management</div><div class="line">- nvm 是一个命令行程序，可以非常方便的安装和管理多个 Node 版本</div><div class="line">- 下载地址：`https://github.com/coreybutler/nvm-windows`</div><div class="line"></div><div class="line">### 4.4 如何验证是否有Node环境</div><div class="line"></div><div class="line">打开终端，输入 `node -v`：</div></pre></td></tr></table></figure>
+<p>$ node -v<br>$ vx.x.x<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">如果能看到输出一个版本号，例如 `v6.8.1` 的文本，说明当前计算机有 Node环境。</div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line">## 5. 快速体验</div><div class="line"></div><div class="line">### 5.1 Hello World</div><div class="line"></div><div class="line">使用 `node` 命令执行一个 `JavaScript` 脚本文件：</div><div class="line"></div><div class="line">1. 打开任意终端</div><div class="line">2. 使用 `cd` 命令切换到要执行的 js 脚本文件所属的目录</div><div class="line">3. 使用 `node 文件名` 去执行对应的 js 脚本文件</div><div class="line">4. node 会解析和执行该文件中的代码，然后将执行结果输出到终端</div><div class="line"></div><div class="line">当你在终端中输入 node example.js，</div><div class="line">实际上就是使用安装目录中的 node.exe 可执行程序，</div><div class="line">node.exe 程序会自动读取该文件中的内容，</div><div class="line">读取到该文件内容之后，node 环境开始解析和执行，</div><div class="line">如果有 console.log 这样的代码，node 会将该输出打印到控制台中。</div><div class="line"></div><div class="line">- 注意1：文件名不要使用 `node` 命名</div><div class="line"></div><div class="line">- 注意2：文件名和路径最好不要使用中文，路径中也最好不要有空格</div><div class="line"></div><div class="line">### 5.2 文件IO：读写文件</div><div class="line"></div><div class="line">```js</div><div class="line">var fs = require(&apos;fs&apos;)</div><div class="line"></div><div class="line">// 读取文件</div><div class="line">// fs.readFile(&apos;./README&apos;, function(err, data) &#123;</div><div class="line">//   if (err) &#123;</div><div class="line">//     // return console.log(&apos;读取文件失败了&apos;)</div><div class="line">//     throw err</div><div class="line">//   &#125;</div><div class="line">//   console.log(data.toString())</div><div class="line">// &#125;)</div><div class="line"></div><div class="line">// 写入文件</div><div class="line">fs.writeFile(&apos;./a.txt&apos;, &apos;hello aaa&apos;, function (err) &#123;</div><div class="line">  if (err) &#123;</div><div class="line">    throw err</div><div class="line">  &#125;</div><div class="line">  console.log(&apos;文件写入成功&apos;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h3 id="5-3-网络IO：HTTP服务器"><a href="#5-3-网络IO：HTTP服务器" class="headerlink" title="5.3 网络IO：HTTP服务器"></a>5.3 网络IO：HTTP服务器</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 1. 创建 HTTP 服务器，得到一个 服务器实例对象</span></div><div class="line"><span class="keyword">var</span> server = http.createServer()</div><div class="line"></div><div class="line"><span class="keyword">var</span> money = <span class="number">0</span></div><div class="line"></div><div class="line"><span class="comment">// 2. 给 Server 对象添加 request 事件处理函数</span></div><div class="line"><span class="comment">// 回调函数需要接收两个参数：</span></div><div class="line"><span class="comment">//    第一个参数：Request，用来获取当前客户端的请求信息</span></div><div class="line"><span class="comment">//                Request 对象可以获取客户端请求中的 url 请求地址、查询字符串、post 请求提交的数据等</span></div><div class="line"><span class="comment">//    第二个参数：Response 也是一个对象，一般用来给本次请求发送响应数据</span></div><div class="line">server.on(<span class="string">'request'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">request, response</span>) </span>&#123;</div><div class="line">  money++</div><div class="line"></div><div class="line">  <span class="comment">// 告诉客户端，本次响应的数据是文本类型，utf-8 编码</span></div><div class="line">  response.writeHead(<span class="number">200</span>, &#123;</div><div class="line">    <span class="string">'Content-Type'</span>: <span class="string">'text/plain; charset=utf-8'</span></div><div class="line">  &#125;)</div><div class="line">  response.write(<span class="string">'回家过年了，今年赚了：'</span> + money + <span class="string">' RMB'</span>)</div><div class="line">  response.end()</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">// 3. 通过 Server 对象的 listen 函数，设置一个监听的端口号，启动服务器</span></div><div class="line">server.listen(<span class="number">3000</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// 当服务器开启监听成功之后，会触发该回调处理函数</span></div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'server is running at port 3000.'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="6-path环境变量"><a href="#6-path环境变量" class="headerlink" title="6. path环境变量"></a>6. path环境变量</h2><p>当在终端中要求系统运行一个程序而没有告诉它程序所在的完整路径时，<br>系统首先在当前目录下面寻找该程序，<br>如果找不到，则系统会跑到path环境变量中指定的路径去找，如果找到，直接运行，<br>如果path环境变量中也没有找到，则直接提示不是内部或外部命令，也不是可运行的程序。</p>
+<p>添加 path 环境变量的两种方式：</p>
+<p>一：直接在path环境变量中加入程序所属目录的绝对路径，<br>    两边以 <strong>英文分号</strong> 进行分隔。</p>
+<p>例如 <code>feiq.exe</code> 程序的绝对路径是 <code>C:\Program Files\feiQ</code>，<br>则在 <code>path</code> 中添加 <code>;C:\Program Files\feiQ;</code></p>
+<p>二：也可以在外部先定义一个变量名，值就是程序所属目录的绝对路径，<br>    然后在 path 中以 <code>%变量名%</code> 的方式引入，两边以分号分隔</p>
+<p>例如 <code>qq.exe</code> 程序的绝对路径是 <code>C:\Program Files (x86)\Tencent\QQ\Bin</code>，<br>则先定义一个变量名 <code>QQ_HOME</code> ，变量值就是 <code>C:\Program Files (x86)\Tencent\QQ\Bin</code>，<br>然后在 <code>path</code> 中填入变量名：<code>;%QQ_HOME%;</code></p>
+<h2 id="7-Node-基础"><a href="#7-Node-基础" class="headerlink" title="7. Node 基础"></a>7. Node 基础</h2><h3 id="7-1-Node-中的-JavaScript"><a href="#7-1-Node-中的-JavaScript" class="headerlink" title="7.1 Node 中的 JavaScript"></a>7.1 Node 中的 JavaScript</h3><ul>
+<li><p>REPL运行环境</p>
+<ul>
+<li>R：read</li>
+<li>E：Eval</li>
+<li>P：Print</li>
+<li>L：Loop</li>
+</ul>
+</li>
+<li><p>ECMAScript  </p>
+<ul>
+<li>Node 对最新的 ECMAScript 语言标准支持的非常好</li>
+<li>对最新的 ES6 支持了将近 96% 的语法</li>
+<li>Node 除了官方的 ECMAScript 语言规范</li>
+<li>同时将 console 对象、定时器等函数也移植到 Node 中</li>
+</ul>
+</li>
+<li><p>全局对象</p>
+<ul>
+<li>global<ul>
+<li>相对于浏览器中的的全局对象 window</li>
+<li>全局作用域和模块作用域的概念</li>
+</ul>
+</li>
+<li>Console<ul>
+<li>log</li>
+<li>info</li>
+<li>warn</li>
+<li>error</li>
+</ul>
+</li>
+<li>process<ul>
+<li>进程对象</li>
+</ul>
+</li>
+<li>Buffer</li>
+</ul>
+</li>
+<li><p>全局函数</p>
+<ul>
+<li>setInterval 和 clearInterval</li>
+<li>setTimeout 和 clearTimeout</li>
+<li>setImmediate 和 clearImmediate</li>
+</ul>
+</li>
+<li><p>模块内成员</p>
+<ul>
+<li><strong>dirname 和 </strong>filename</li>
+<li>require</li>
+<li>exports</li>
+<li>module</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-2-Node-中的模块系统"><a href="#7-2-Node-中的模块系统" class="headerlink" title="7.2 Node 中的模块系统"></a>7.2 Node 中的模块系统</h3><ul>
+<li>Node 根据 <code>CommonJS</code> 规范实现了自己的一套模块系统</li>
+<li>一个单独的文件就是一个模块<ul>
+<li>如何定义模块：</li>
+<li>Node 天生就已经实现了一个模块系统解决方案</li>
+<li>默认在Node中运行的 JavaScript 脚本文件，就是一个模块，而且是私有作用域</li>
+</ul>
+</li>
+<li>每一个模块都是一个单独的作用域<ul>
+<li>没有浏览器中 window 全局作用域的概念了</li>
+</ul>
+</li>
+<li>每个文件对外接口是 <code>module.exports</code> 对象</li>
+<li><code>require</code> 方法用于加载模块<ul>
+<li>执行被加载模块中的 JavaScript 代码</li>
+<li>得到模块的 <code>module.exports</code> 接口对象</li>
+</ul>
+</li>
+<li>核心模块和文件模块</li>
+</ul>
+<h3 id="7-3-包和-npm"><a href="#7-3-包和-npm" class="headerlink" title="7.3 包和 npm"></a>7.3 包和 npm</h3><h2 id="8-调试-Node"><a href="#8-调试-Node" class="headerlink" title="8. 调试 Node"></a>8. 调试 Node</h2><blockquote>
+<p>一个优秀的开发人员调试能力很重要<br>任何一个平台的开发都离不开调试，调试不仅仅是工具，更多的是套路</p>
+</blockquote>
+<h3 id="8-1-关于-Debug"><a href="#8-1-关于-Debug" class="headerlink" title="8.1 关于 Debug"></a>8.1 关于 Debug</h3><p>所谓的 Debug ，也就是找到并去除缺陷的过程，这些过程呢，其实也是由套路规则可循的，以下是我总结的一些调试经验：</p>
+<ul>
+<li><strong>系统化注释掉或禁用代码块</strong>：排除法</li>
+<li>分析网络数据流，确定问题是客户端还是服务器</li>
+<li>使用之前能用的输入，并一点一定地修改输入，直到问题呈现</li>
+<li>用版本控制逐次回退，直到问题消失</li>
+</ul>
+<h3 id="8-2-Node-中的-Debug"><a href="#8-2-Node-中的-Debug" class="headerlink" title="8.2 Node 中的 Debug"></a>8.2 Node 中的 Debug</h3><ul>
+<li><strong>console.log</strong></li>
+<li>node-inspector<ul>
+<li>这个一个可以在浏览器中调试 Node 的一个工具</li>
+</ul>
+</li>
+<li>visual studio code<ul>
+<li>这也是一个编辑器，内部类似于 Webstorm，也集成了一个调试Node代码的功能</li>
+</ul>
+</li>
+<li>Webstorm</li>
+</ul>
+<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><ul>
+<li>Markdown文件转换：将md文件转换为html文件</li>
+<li>命令行工具：<ul>
+<li>http-server</li>
+<li>browser-sync<br>```</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-HTML5-5" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/27/HTML5-5/" class="article-date">
+      <time datetime="2016-09-27T02:51:29.000Z" itemprop="datePublished">2016-09-27</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/27/HTML5-5/">HTML5-5</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div></pre></td><td class="code"><pre><div class="line">### DOM扩展</div><div class="line"></div><div class="line">#### 获取元素</div><div class="line"></div><div class="line">1、document.getElementsByClassName (&apos;class&apos;) 通过类名获取元素，以类数组形式存在。</div><div class="line"></div><div class="line">2、document.querySelector(&apos;selector&apos;) 通过CSS选择器获取元素，符合匹配条件的第1个元素。</div><div class="line"></div><div class="line">3、document.querySelectorAll(&apos;selector&apos;) 通过CSS选择器获取元素，以类数组形式存在。</div><div class="line"></div><div class="line">#### 类名操作</div><div class="line"></div><div class="line">1、Node.classList.add(&apos;class&apos;) 添加class</div><div class="line"></div><div class="line">2、Node.classList.remove(&apos;class&apos;) 移除class</div><div class="line"></div><div class="line">3、Node.classList.toggle(&apos;class&apos;) 切换class，有则移除，无则添加</div><div class="line"></div><div class="line">4、Node.classList.contains(&apos;class&apos;) 检测是否存在class</div><div class="line"></div><div class="line">Node指一个有效的DOM节点，是一个通称。</div><div class="line"></div><div class="line">#### 自定义属性</div><div class="line"></div><div class="line">在HTML5中我们可以自定义属性，其格式如下data-*=&quot;&quot;，例如</div><div class="line"></div><div class="line">data-info=&quot;我是自定义属性&quot;，通过Node.dataset[&apos;info&apos;] 我们便可以获取到自定义的属性值。</div><div class="line"></div><div class="line">Node.dataset是以类数组形式存在的</div><div class="line"></div><div class="line">当我们如下格式设置时，则需要以驼峰格式才能正确获取</div><div class="line"></div><div class="line">data-my-name=&quot;itcast&quot;，获取Node.dataset[&apos;myName&apos;]</div><div class="line"></div><div class="line">#### 案例练习</div><div class="line"></div><div class="line">Tab切换</div><div class="line"></div><div class="line">```html</div><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang=&quot;en&quot;&gt;</div><div class="line">&lt;head&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;Tab 标签&lt;/title&gt;</div><div class="line">    &lt;style&gt;</div><div class="line">		body &#123;</div><div class="line">			margin: 0;</div><div class="line">			padding: 0;</div><div class="line">			background-color: #F7F7F7;</div><div class="line">		&#125;</div><div class="line">	</div><div class="line">		.tabs &#123;</div><div class="line">			width: 400px;</div><div class="line">			margin: 30px auto;</div><div class="line">			background-color: #FFF;</div><div class="line">			border: 1px solid #C0DCC0;</div><div class="line">			box-sizing: border-box;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		.tabs nav &#123;</div><div class="line">			height: 40px;</div><div class="line">			text-align: center;</div><div class="line">			line-height: 40px;</div><div class="line">			overflow: hidden;</div><div class="line">			background-color: #C0DCC0;</div><div class="line">			display: flex;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		nav a &#123;</div><div class="line">			display: block;</div><div class="line">			width: 100px;</div><div class="line">			border-right: 1px solid #FFF;</div><div class="line">			color: #000;</div><div class="line">			text-decoration: none;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		nav a:last-child &#123;</div><div class="line">			border-right: 0 none;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		nav a.active &#123;</div><div class="line">			background-color: #9BAF9B;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		.cont &#123;</div><div class="line">			overflow: hidden;</div><div class="line">			display: none;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		.cont ol &#123;</div><div class="line">			line-height: 30px;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">	&lt;div class=&quot;tabs&quot;&gt;</div><div class="line">		&lt;nav&gt;</div><div class="line">			&lt;a href=&quot;javascript:;&quot; data-cont=&quot;local&quot;&gt;国内新闻&lt;/a&gt;</div><div class="line">			&lt;a href=&quot;javascript:;&quot; data-cont=&quot;global&quot;&gt;国际新闻&lt;/a&gt;</div><div class="line">			&lt;a href=&quot;javascript:;&quot; data-cont=&quot;sports&quot;&gt;体育新闻&lt;/a&gt;</div><div class="line">			&lt;a href=&quot;javascript:;&quot; data-cont=&quot;funny&quot;&gt;娱乐新闻&lt;/a&gt;</div><div class="line">		&lt;/nav&gt;</div><div class="line">		&lt;section class=&quot;cont&quot; id=&quot;local&quot;&gt;</div><div class="line">			&lt;ol&gt;</div><div class="line">				&lt;li&gt;河感在生矿难，死伤在全10&lt;/li&gt;</div><div class="line">				&lt;li&gt;禽流感在感在广1处继续蔓延，温家宝指示&lt;/li&gt;</div><div class="line">				&lt;li&gt;南方大旱，农作物减产绝收面积上亩&lt;/li&gt;</div><div class="line">				&lt;li&gt;猪流感在广在全国暴发&lt;/li&gt;</div><div class="line">				&lt;li&gt;禽流感在全国多处继续蔓延，温家宝指示&lt;/li&gt;</div><div class="line">				&lt;li&gt;南方大旱，农作物减产绝收面积上亩&lt;/li&gt;</div><div class="line">				&lt;li&gt;猪流感在广东群体性暴发&lt;/li&gt;</div><div class="line">			&lt;/ol&gt;</div><div class="line">		&lt;/section&gt;</div><div class="line">		&lt;section class=&quot;cont&quot; id=&quot;global&quot;&gt;</div><div class="line">			&lt;ol&gt;</div><div class="line">				&lt;li&gt;河南再次发生矿难，死伤人数超过100&lt;/li&gt;</div><div class="line">				&lt;li&gt;禽流感次发生蔓延，温家宝指示&lt;/li&gt;</div><div class="line">				&lt;li&gt;南方大旱，农作物减产绝收面积上亩&lt;/li&gt;</div><div class="line">				&lt;li&gt;猪流感在广减产绝收发&lt;/li&gt;</div><div class="line">				&lt;li&gt;禽流感在全国多作物减产绝收面积上亩&lt;/li&gt;</div><div class="line">				&lt;li&gt;猪流感在广东群体性暴发&lt;/li&gt;</div><div class="line">			&lt;/ol&gt;</div><div class="line">		&lt;/section&gt;</div><div class="line">		&lt;section class=&quot;cont&quot; id=&quot;sports&quot;&gt;</div><div class="line">			&lt;ol&gt;</div><div class="line">				&lt;li&gt;河南再次发生矿难，死伤人数超过100&lt;/li&gt;</div><div class="line">				&lt;li&gt;禽流感在全国多处农作物农延，温家宝指示&lt;/li&gt;</div><div class="line">				&lt;li&gt;南方大旱，农作物减产绝收面积上亩&lt;/li&gt;</div><div class="line">				&lt;li&gt;猪流感在广东群体性暴发&lt;/li&gt;</div><div class="line">				&lt;li&gt;禽流感在全农作物继续蔓延，温家宝指示&lt;/li&gt;</div><div class="line">				&lt;li&gt;南方大农作物减产绝收面积上亩&lt;/li&gt;</div><div class="line">				&lt;li&gt;猪流感在广东群体性暴发&lt;/li&gt;</div><div class="line">			&lt;/ol&gt;</div><div class="line">		&lt;/section&gt;</div><div class="line">		&lt;section class=&quot;cont&quot; id=&quot;funny&quot;&gt;</div><div class="line">			&lt;ol&gt;</div><div class="line">				&lt;li&gt;河南再次发生矿难，死伤人数超过100&lt;/li&gt;</div><div class="line">				&lt;li&gt;禽流感在全国多处农作物农延，温家宝指示&lt;/li&gt;</div><div class="line">				&lt;li&gt;南方大旱，农作物减产绝收面积上亩&lt;/li&gt;</div><div class="line">				&lt;li&gt;猪流感在广东群体性暴发&lt;/li&gt;</div><div class="line">				&lt;li&gt;禽流感在全农作物继续蔓延，温家宝指示&lt;/li&gt;</div><div class="line">				&lt;li&gt;南方大农作物减产绝收面积上亩&lt;/li&gt;</div><div class="line">				&lt;li&gt;猪流感在广东群体性暴发&lt;/li&gt;</div><div class="line">			&lt;/ol&gt;</div><div class="line">		&lt;/section&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">		(function (key) &#123;</div><div class="line"></div><div class="line">			// 获取所有导航</div><div class="line">			var navs = document.querySelectorAll(&apos;nav a&apos;),</div><div class="line">				cont;</div><div class="line"></div><div class="line">			for(var i=0; i&lt;navs.length; i++) &#123;</div><div class="line"></div><div class="line">				// 默认选中</div><div class="line">				if(i == key) &#123;</div><div class="line">					navs[i].classList.add(&apos;active&apos;);</div><div class="line">					cont = navs[i].dataset[&apos;cont&apos;];</div><div class="line">					document.querySelector(&apos;#&apos; + cont).style.display = &apos;block&apos;;</div><div class="line">				&#125;</div><div class="line"></div><div class="line">				navs[i].onclick = function () &#123;</div><div class="line">					// 过滤无效点击</div><div class="line">					if(this.classList.contains(&apos;active&apos;)) return;</div><div class="line"></div><div class="line">					var active = document.querySelector(&apos;.active&apos;);</div><div class="line"></div><div class="line">					active.classList.remove(&apos;active&apos;);</div><div class="line"></div><div class="line">					cont = active.dataset[&apos;cont&apos;];</div><div class="line"></div><div class="line">					document.querySelector(&apos;#&apos; + cont).style.display = &apos;none&apos;;</div><div class="line"></div><div class="line">					this.classList.toggle(&apos;active&apos;);</div><div class="line"></div><div class="line">					cont = this.dataset[&apos;cont&apos;];</div><div class="line">					</div><div class="line">					document.querySelector(&apos;#&apos; + cont).style.display = &apos;block&apos;;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line"></div><div class="line">		&#125;)(3);</div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h4 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h4><p>1、微数据</p>
+<p><a href="http://kayosite.com/html5-microdata.html" target="_blank" rel="external">http://kayosite.com/html5-microdata.html</a></p>
+<p>可以理解成新语义标签的一种补充</p>
+<p>2、ARIA</p>
+<p><a href="http://www.zhangxinxu.com/wordpress/2012/03/wai-aria-%E6%97%A0%E9%9A%9C%E7%A2%8D%E9%98%85%E8%AF%BB/#ariaRole" target="_blank" rel="external">http://www.zhangxinxu.com/wordpress/2012/03/wai-aria-%E6%97%A0%E9%9A%9C%E7%A2%8D%E9%98%85%E8%AF%BB/#ariaRole</a></p>
+<p>```</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-HTML5-4" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/26/HTML5-4/" class="article-date">
+      <time datetime="2016-09-26T01:49:09.000Z" itemprop="datePublished">2016-09-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/26/HTML5-4/">HTML5-4</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">## 网页多媒体</div><div class="line"></div><div class="line">#### 音频</div><div class="line"></div><div class="line">- 定义音频播放组件</div><div class="line"></div><div class="line">```html</div><div class="line">&lt;audio src=&quot;要播放的音频文件&quot;&gt;&lt;/audio&gt;</div></pre></td></tr></table></figure>
+<h4 id="视频"><a href="#视频" class="headerlink" title="视频"></a>视频</h4><ul>
+<li>定义播放视频组件</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">"要播放的视频文件"</span>&gt;</span><span class="tag">&lt;/<span class="name">video</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="旧版本浏览器提示"><a href="#旧版本浏览器提示" class="headerlink" title="旧版本浏览器提示"></a>旧版本浏览器提示</h4><ul>
+<li>如果HTML中遇到不能识别的标签，就会将该标签当做DIV(块级元素) </li>
+<li>那么video中的innerHTML也就会直接显示在界面上</li>
+<li>利用这个特点我们可以实现不支持video标签的浏览器提示</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">src</span>=<span class="string">"demo.mp4"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 如果浏览器不识别video标签，以下内容可以直接显示在浏览器上 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>抱歉，您的浏览器不支持视频播放！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="格式兼容"><a href="#格式兼容" class="headerlink" title="格式兼容"></a>格式兼容</h4><ul>
+<li>每个浏览器的音视频格式支持不同（版权问题）</li>
+<li>需要兼容更多的浏览器，可以通过定义多个<code>&lt;source&gt;</code>的方式实现</li>
+<li>html解析过程中会找其中第一个能认识的格式播放，一旦找到认识的视频格式，就不会再往后找了</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">controls</span> <span class="attr">width</span>=<span class="string">"500"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- 分析第一个source格式是否支持，如果支持则加载该文件，不支持继续往下解析 --&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"chrome.mp4"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"chrome.ogv"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"chrome.webm"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>抱歉，您的浏览器不支持视频播放！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>因此不管是audio还是video都不要直接设置标签的src</li>
+</ul>
+<h4 id="多媒体标签属性"><a href="#多媒体标签属性" class="headerlink" title="多媒体标签属性"></a>多媒体标签属性</h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>controls</td>
+<td>决定是否显示控制菜单</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>自动播放</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>循环播放</td>
+</tr>
+<tr>
+<td>height/width</td>
+<td>定义播放器的宽高，只会在视频标签中生效</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>预加载 是否在页面加载完成并且没有开始播放时就开始加载文件，如果有自动播放属性则该属性无意义</td>
+</tr>
+</tbody>
+</table>
+<h4 id="自定义播放器外观"><a href="#自定义播放器外观" class="headerlink" title="自定义播放器外观"></a>自定义播放器外观</h4><ol>
+<li>隐藏原生的控制菜单，也就是删除标签中的controls属性</li>
+<li>自己设计一套界面控制元素，比如播放按钮，音量控制开关之类</li>
+<li>为每个不同的控制元素注册对应的事件</li>
+<li>在事件中通过视频元素的API实现自定义播放器的效果</li>
+<li>具体的多媒体元素API表：</li>
+</ol>
+<h5 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h5><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>addTextTrack()</td>
+<td>向音频/视频添加新的文本轨道</td>
+</tr>
+<tr>
+<td>canPlayType()</td>
+<td>检测浏览器是否能播放指定的音频/视频类型</td>
+</tr>
+<tr>
+<td>load()</td>
+<td>重新加载音频/视频元素</td>
+</tr>
+<tr>
+<td>play()</td>
+<td>开始播放音频/视频</td>
+</tr>
+<tr>
+<td>pause()</td>
+<td>暂停当前播放的音频/视频</td>
+</tr>
+</tbody>
+</table>
+<h5 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h5><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>audioTracks</td>
+<td>返回表示可用音轨的 AudioTrackList 对象                 </td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>设置或返回是否在加载完成后随即播放音频/视频</td>
+</tr>
+<tr>
+<td>buffered</td>
+<td>返回表示音频/视频已缓冲部分的 TimeRanges 对象 </td>
+</tr>
+<tr>
+<td>controller</td>
+<td>返回表示音频/视频当前媒体控制器的 MediaController 对象</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>设置或返回音频/视频是否显示控件（比如播放/暂停等）</td>
+</tr>
+<tr>
+<td>crossOrigin</td>
+<td>设置或返回音频/视频的 CORS 设置 </td>
+</tr>
+<tr>
+<td>currentSrc</td>
+<td>返回当前音频/视频的 URL</td>
+</tr>
+<tr>
+<td>currentTime</td>
+<td>设置或返回音频/视频中的当前播放位置（以秒计）</td>
+</tr>
+<tr>
+<td>defaultMuted</td>
+<td>设置或返回音频/视频默认是否静音</td>
+</tr>
+<tr>
+<td>defaultPlaybackRate</td>
+<td>设置或返回音频/视频的默认播放速度</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>返回当前音频/视频的长度（以秒计）</td>
+</tr>
+<tr>
+<td>ended</td>
+<td>返回音频/视频的播放是否已结束</td>
+</tr>
+<tr>
+<td>error</td>
+<td>返回表示音频/视频错误状态的 MediaError 对象</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>设置或返回音频/视频是否应在结束时重新播放</td>
+</tr>
+<tr>
+<td>mediaGroup</td>
+<td>设置或返回音频/视频所属的组合（用于连接多个音频/视频元素）</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>设置或返回音频/视频是否静音</td>
+</tr>
+<tr>
+<td>networkState</td>
+<td>返回音频/视频的当前网络状态</td>
+</tr>
+<tr>
+<td>paused</td>
+<td>设置或返回音频/视频是否暂停</td>
+</tr>
+<tr>
+<td>playbackRate</td>
+<td>设置或返回音频/视频播放的速度</td>
+</tr>
+<tr>
+<td>played</td>
+<td>返回表示音频/视频已播放部分的 TimeRanges 对象</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>设置或返回音频/视频是否应该在页面加载后进行加载</td>
+</tr>
+<tr>
+<td>readyState</td>
+<td>返回音频/视频当前的就绪状态</td>
+</tr>
+<tr>
+<td>seekable</td>
+<td>返回表示音频/视频可寻址部分的 TimeRanges 对象</td>
+</tr>
+<tr>
+<td>seeking</td>
+<td>返回用户是否正在音频/视频中进行查找</td>
+</tr>
+<tr>
+<td>src</td>
+<td>设置或返回音频/视频元素的当前来源</td>
+</tr>
+<tr>
+<td>startDate</td>
+<td>返回表示当前时间偏移的 Date 对象</td>
+</tr>
+<tr>
+<td>textTracks</td>
+<td>返回表示可用文本轨道的 TextTrackList 对象</td>
+</tr>
+<tr>
+<td>videoTracks</td>
+<td>返回表示可用视频轨道的 VideoTrackList 对象</td>
+</tr>
+<tr>
+<td>volume</td>
+<td>设置或返回音频/视频的音量</td>
+</tr>
+</tbody>
+</table>
+<h5 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h5><table>
+<thead>
+<tr>
+<th>事件</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abort</td>
+<td>当音频/视频的加载已放弃时</td>
+</tr>
+<tr>
+<td>canplay</td>
+<td>当浏览器可以播放音频/视频时</td>
+</tr>
+<tr>
+<td>canplaythrough</td>
+<td>当浏览器可在不因缓冲而停顿的情况下进行播放时</td>
+</tr>
+<tr>
+<td>durationchange</td>
+<td>当音频/视频的时长已更改时</td>
+</tr>
+<tr>
+<td>emptied</td>
+<td>当目前的播放列表为空时</td>
+</tr>
+<tr>
+<td>ended</td>
+<td>当目前的播放列表已结束时</td>
+</tr>
+<tr>
+<td>error</td>
+<td>当在音频/视频加载期间发生错误时</td>
+</tr>
+<tr>
+<td>loadeddata</td>
+<td>当浏览器已加载音频/视频的当前帧时</td>
+</tr>
+<tr>
+<td>loadedmetadata</td>
+<td>当浏览器已加载音频/视频的元数据时</td>
+</tr>
+<tr>
+<td>loadstart</td>
+<td>当浏览器开始查找音频/视频时</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>当音频/视频已暂停时</td>
+</tr>
+<tr>
+<td>play</td>
+<td>当音频/视频已开始或不再暂停时</td>
+</tr>
+<tr>
+<td>playing</td>
+<td>当音频/视频在已因缓冲而暂停或停止后已就绪时</td>
+</tr>
+<tr>
+<td>progress</td>
+<td>当浏览器正在下载音频/视频时</td>
+</tr>
+<tr>
+<td>ratechange</td>
+<td>当音频/视频的播放速度已更改时</td>
+</tr>
+<tr>
+<td>seeked</td>
+<td>当用户已移动/跳跃到音频/视频中的新位置时</td>
+</tr>
+<tr>
+<td>seeking</td>
+<td>当用户开始移动/跳跃到音频/视频中的新位置时</td>
+</tr>
+<tr>
+<td>stalled</td>
+<td>当浏览器尝试获取媒体数据，但数据不可用时</td>
+</tr>
+<tr>
+<td>suspend</td>
+<td>当浏览器刻意不获取媒体数据时</td>
+</tr>
+<tr>
+<td>timeupdate</td>
+<td>当目前的播放位置已更改时</td>
+</tr>
+<tr>
+<td>volumechange</td>
+<td>当音量已更改时</td>
+</tr>
+<tr>
+<td>waiting</td>
+<td>当视频由于需要缓冲下一帧而停止</td>
+</tr>
+</tbody>
+</table>
+<p>```</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-HTML5-3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/25/HTML5-3/" class="article-date">
+      <time datetime="2016-09-25T09:45:35.000Z" itemprop="datePublished">2016-09-25</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/25/HTML5-3/">HTML5-3</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div></pre></td><td class="code"><pre><div class="line">## 表单</div><div class="line"></div><div class="line">&gt;伴随着互联网富应用以及移动开发的兴起，传统的Web表单已经越来越不能满足开发的需求，  </div><div class="line">&gt;所以HTML5在Web表单方向也做了很大的改进，如拾色器、日期/时间组件等，使表单处理更加高效。    </div><div class="line">&gt;此章节学习目的，了解HTML5表单的新增的特性，以及PC和移动设备间的差异，其兼容性较差。    </div><div class="line"></div><div class="line"></div><div class="line">#### 新增表单类型 type</div><div class="line"></div><div class="line">- email - 限定输入内容为邮箱地址，表单提交时会校验格式</div><div class="line">- url - 限定输入内容为URL，表单提交时会校验格式</div><div class="line">- number - 限定输入内容为数字，表单提交时会校验格式</div><div class="line">- range - 数值范围选择器</div><div class="line">- Date Pickers - 日期时间选择器</div><div class="line">    + 样式不能修改，移动端用的比较多，因为移动端显示的是系统的时间或日期选择器</div><div class="line">    + date - 选取日、月、年</div><div class="line">    + month - 选取月、年</div><div class="line">    + week - 选取周和年</div><div class="line">    + time - 选取时间（小时和分钟）</div><div class="line">    + datetime - 选取时间、日、月、年，浏览器兼容性不好，效果等同于datetime-local</div><div class="line">    + datetime-local - 选取本地时间、日、月、年</div><div class="line">- search - 搜索域，语义化，表示定义搜索框</div><div class="line"></div><div class="line"></div><div class="line">#### 新增表单属性</div><div class="line"></div><div class="line">- form</div><div class="line">    + autocomplete 设置整个表单是否开启自动完成 on|off</div><div class="line">    + novalidate 设置H5的表单校验是否工作 true 不工作  不加该属性代表校验</div><div class="line"></div><div class="line">- input:</div><div class="line">    + autocomplete 单独设置每个文本框的自动完成</div><div class="line">    + autofocus 设置当前文本域页面加载完了过后自动得到焦点</div><div class="line">    + form 属性是让表单外的表单元素也可以跟随表单一起提交</div><div class="line">    + form overrides</div><div class="line">        * formaction 在submit上重写表单的特定属性，当点击当前submit时会以当前值使用</div><div class="line">        * formenctype,</div><div class="line">        * formmethod,</div><div class="line">        * formnovalidate,</div><div class="line">        * formtarget</div><div class="line">    + list 作用就是指定当前文本框的自动完成列表的数据 datalist 在界面上是看不见的，只是用于定义数据列表的</div><div class="line">    + min / max / step</div><div class="line">        * min max 限制值的范围，但是不会再输入时限制，提交时校验，</div><div class="line">        * step设置的是每次加减的增量</div><div class="line">        * 主要使用在number range datepicker上</div><div class="line">    + multiple</div><div class="line">        * 文本域的多选 </div><div class="line">    + pattern</div><div class="line">        * 设置文本框的匹配格式（正则）</div><div class="line">    + placeholder</div><div class="line">        * 文本框占位符</div><div class="line">    + required</div><div class="line">        * 限制当前input为必须的</div><div class="line">        </div><div class="line">#### 表单事件</div><div class="line">        </div><div class="line">        oninput 用户输入内容时触发，可用于移动端输入字数统计</div><div class="line">        oninvalid 验证不通过时触发，setCustomValidity 设置自定义提示</div><div class="line"></div><div class="line">        </div><div class="line"></div><div class="line">#### 虚拟键盘调用</div><div class="line"></div><div class="line">```html</div><div class="line">    &lt;input type=&quot;text&quot; name=&quot;txt_text&quot; id=&quot;txt_text&quot;&gt;</div><div class="line">    &lt;input type=&quot;number&quot; name=&quot;txt_number&quot; id=&quot;txt_number&quot;&gt;</div><div class="line">    &lt;input type=&quot;email&quot; name=&quot;txt_email&quot; id=&quot;txt_email&quot;&gt;</div><div class="line">    &lt;input type=&quot;tel&quot; name=&quot;txt_tel&quot; id=&quot;txt_tel&quot;&gt;</div><div class="line">    &lt;input type=&quot;url&quot; name=&quot;txt_url&quot; id=&quot;txt_url&quot;&gt;</div></pre></td></tr></table></figure>
+<p><img src="../../../readme/img/input_01.png" width="180" height="300"><br><img src="../../../readme/img/input_02.png" width="180" height="300"><br><img src="../../../readme/img/input_03.png" width="180" height="300"><br><img src="../../../readme/img/input_04.png" width="180" height="300"><br><img src="../../../readme/img/input_05.png" width="180" height="300"></p>
+<p>```</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-HTML5-2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/23/HTML5-2/" class="article-date">
+      <time datetime="2016-09-23T05:43:06.000Z" itemprop="datePublished">2016-09-23</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/23/HTML5-2/">HTML5-2</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">## html5标签</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">#### 新增标签</div><div class="line">&gt;本质上新语义标签与常见的标签div、span没有区别，只是其具有表意性。  </div><div class="line"></div><div class="line">&gt;使用时除了在HTML结构上需要注意外，其它和普通标签的使用无任何差别。</div><div class="line"></div><div class="line">##### 结构标签</div><div class="line">```html</div><div class="line">    &lt;article&gt;     标记定义一篇文章</div><div class="line">    &lt;header&gt;      标记定义一个页面或一个区域的头部</div><div class="line">    &lt;nav&gt;         标记定义导航链接</div><div class="line">    &lt;section&gt;     标记定义一个区域</div><div class="line">    &lt;aside&gt;       标记定义页面内容部分的侧边栏</div><div class="line">    &lt;hgroup&gt;      标记定义文件中一个区块的相关信息</div><div class="line">    &lt;figure&gt;      标记定义一组媒体内容以及它们的标题   </div><div class="line">    &lt;figcaption&gt;  标签定义 figure 元素的标题。</div><div class="line">    &lt;footer&gt;      标记定义一个页面或一个区域的底部</div><div class="line">    &lt;dialog&gt;      标记定义一个对话框(会话框)类似微信</div></pre></td></tr></table></figure>
+<h5 id="多媒体交互标签"><a href="#多媒体交互标签" class="headerlink" title="多媒体交互标签"></a>多媒体交互标签</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">video</span>&gt;</span>       标记定义一个视频</div><div class="line"><span class="tag">&lt;<span class="name">audio</span>&gt;</span>       标记定义音频内容</div><div class="line"><span class="tag">&lt;<span class="name">source</span>&gt;</span>      标记定义媒体资源</div><div class="line"><span class="tag">&lt;<span class="name">canvas</span>&gt;</span>      标记定义图片</div><div class="line"><span class="tag">&lt;<span class="name">embed</span>&gt;</span>       标记定义外部的可交互的内容或插件 比如flash</div></pre></td></tr></table></figure>
+<h5 id="Web应用标签"><a href="#Web应用标签" class="headerlink" title="Web应用标签"></a>Web应用标签</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">command</span>&gt;</span>      menu标记定义一个命令按钮</div><div class="line"><span class="tag">&lt;<span class="name">meter</span>&gt;</span>        状态标签(实时状态显示:气压、气温)C、O</div><div class="line"><span class="tag">&lt;<span class="name">progress</span>&gt;</span>     状态标签 (任务过程:安装、加载) C、F、O</div><div class="line"><span class="tag">&lt;<span class="name">datalist</span>&gt;</span>     为input标记定义一个下拉列表,配合option F、O</div><div class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span>      标记定义一个元素的详细内容 ，配合dt、dd   C</div></pre></td></tr></table></figure>
+<h5 id="注释标签"><a href="#注释标签" class="headerlink" title="注释标签"></a>注释标签</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ruby</span>&gt;</span>       标记定义 注释或音标</div><div class="line"><span class="tag">&lt;<span class="name">rp</span>&gt;</span>         告诉那些不支持 Ruby元素的浏览器如何去显示</div><div class="line"><span class="tag">&lt;<span class="name">rt</span>&gt;</span>         标记定义对ruby的注释内容文本</div></pre></td></tr></table></figure>
+<h5 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">keygen</span>&gt;</span>      标记定义表单里一个生成的键值(加密信息传送)O、F</div><div class="line"><span class="tag">&lt;<span class="name">mark</span>&gt;</span>        标记定义有标记的文本 (黄色选中状态)</div><div class="line"><span class="tag">&lt;<span class="name">output</span>&gt;</span>      标记定义一些输出类型,计算表单结果配合oninput事</div></pre></td></tr></table></figure>
+<h4 id="兼容处理"><a href="#兼容处理" class="headerlink" title="兼容处理"></a>兼容处理</h4><p>在不支持HTML5新标签的浏览器里，会将这些新的标签解析成行内元素(inline)对待，<br>所以我们只需要将其转换成块元素(block)即可使用，但是在IE9版本以下，并不能正常解析这些新标签，<br>但是却可以识别通过document.createElement(‘tagName’)创建的自定义标签，<br>于是我们的解决方案就是将HTML5的新标签全部通过document.createElement(‘tagName’)来创建一遍，<br>这样IE低版本也能正常解析HTML5新标签了，在实际开发中我们更多采用的是<br>通过检测IE浏览器的版本来加载三方的一个JS库来解决兼容问题。  </p>
+<p>第三方的js库：html5shiv.js<br>怎么使用：在html文档头部加入这个第三方的插件的js库就可以，但是要注意的是只在IE9一下才使用。<br>条件注释：<!--[if lt IE 9]> <![endif]-->  条件判断有  （lt lte gt gte）  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">&lt;!--[if lt IE 9]&gt;</span></div><div class="line">&lt;script src="js/html5shiv.min.js" &gt;&lt;/script&gt;</div><div class="line">   &lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<p>```</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-HTML5-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/20/HTML5-1/" class="article-date">
+      <time datetime="2016-09-20T11:40:52.000Z" itemprop="datePublished">2016-09-20</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/20/HTML5-1/">HTML5-1</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">## html5骨架</div><div class="line"></div><div class="line">#### html4</div><div class="line">    </div><div class="line">- html4 严格模式  emmet语法 html:4s</div><div class="line"></div><div class="line">```html</div><div class="line">    &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;</div><div class="line">    &lt;html lang=&quot;en&quot;&gt;</div><div class="line">    &lt;head&gt;</div><div class="line">        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=UTF-8&quot;&gt;</div><div class="line">        &lt;title&gt;Document&lt;/title&gt;</div><div class="line">    &lt;/head&gt;</div><div class="line">    &lt;body&gt;</div><div class="line">        &lt;!--这是html4的严格模式的html骨架--&gt;</div><div class="line">        &lt;!--DOCTYPE 引入的严格模式的dtd规范  strict.dtd--&gt;</div><div class="line">    &lt;/body&gt;</div><div class="line">    &lt;/html&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li>html4 宽松模式 过渡时期  </li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"</span></div><div class="line">        "http://www.w3.org/TR/html4/loose.dtd"&gt;</div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--这是html4的宽松模式并且是过渡时期的html骨架--&gt;</span></div><div class="line">    <span class="comment">&lt;!--DOCTYPE 引入的严格模式的dtd规范  strict.dtd  并且是transtional 过渡时期--&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="xhtml"><a href="#xhtml" class="headerlink" title="xhtml"></a>xhtml</h5><ul>
+<li>xhtml 4.01升级版 emmet语法 html:xt</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"</span></div><div class="line">        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span> <span class="attr">xml:lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html;charset=UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--这是xhtml过渡时期的html骨架(语法更严谨，是4.01的升级版)--&gt;</span></div><div class="line">    <span class="comment">&lt;!--DOCTYPE 引入的xhtml过渡模式的dtd规范  xhtml1-transitional.dtd  并且是transtional 过渡时期--&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="html5"><a href="#html5" class="headerlink" title="html5"></a>html5</h5><ul>
+<li>html5 emmet语法  html:5 或者 !</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--html doctype 申明规范--&gt;</span></div><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--声明当前页面的语言环境是英文--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--声明当前页面的编码环境是utf-8--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--html5 特点--&gt;</span></div><div class="line"><span class="comment">&lt;!--</span></div><div class="line">    1、更简介</div><div class="line">    2，更宽松</div><div class="line">    注意：在实际开发当中一定要遵守书写规范，养成良好的编码习惯。</div><div class="line">--&gt;</div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h5 id="验证代码"><a href="#验证代码" class="headerlink" title="验证代码"></a>验证代码</h5><p>W3C验证地址</p>
+<p><a href="https://validator.w3.org/" target="_blank" rel="external">https://validator.w3.org/</a></p>
+<p>```</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Ajax-同源跨域" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/21/Ajax-同源跨域/" class="article-date">
+      <time datetime="2016-08-21T15:16:01.000Z" itemprop="datePublished">2016-08-21</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/21/Ajax-同源跨域/">Ajax-同源跨域</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">## 10、同源&amp;跨域</div><div class="line"></div><div class="line">####10.1	同源</div><div class="line"></div><div class="line">同源策略是浏览器的一种安全策略，所谓同源是指，域名，协议，端口完全相同。</div><div class="line"></div><div class="line">####10.2	跨域</div><div class="line"></div><div class="line">不同源则跨域</div><div class="line">例如http://www.example.com/</div><div class="line"></div><div class="line">    http://api.example.com/detail.html  不同源 域名不同  </div><div class="line">    https//www.example.com/detail.html   不同源 协议不同  </div><div class="line">    http://www.example.com:8080/detail.html	不同源	端口不同  </div><div class="line">    http://api.example.com:8080/detail.html	不同源	域名、端口不同  </div><div class="line">    https://api.example.com/detail.html	不同源	协议、域名不同  </div><div class="line">    https://www.example.com:8080/detail.html	不同源	端口、协议不同  </div><div class="line">    http://www.example.com/detail/index.html	同源	只是目录不同  </div><div class="line"></div><div class="line">####10.3	跨域方案</div><div class="line"></div><div class="line">1、顶级域名相同的可以通过domain.name来解决，即同时设置 domain.name = 顶级域名（如example.com）  </div><div class="line">2、document.domain + iframe  </div><div class="line">3、window.name + iframe  </div><div class="line">4、location.hash + iframe  </div><div class="line">5、window.postMessage()  </div><div class="line"></div><div class="line">参考资料</div><div class="line">http://rickgray.me/2015/09/03/solutions-to-cross-domain-in-browser.html</div><div class="line"></div><div class="line"></div><div class="line">#### 10.4、 jsonp</div><div class="line"></div><div class="line">&gt;JSON with Padding</div><div class="line"></div><div class="line">**1、原理剖析**</div><div class="line"></div><div class="line">其本质是利用了&lt;script src=&quot;&quot;&gt;&lt;/script&gt;标签具有可跨域的特性，</div><div class="line">由服务端返回一个预先定义好的Javascript函数的调用，并且将服务器数据以该函数参数的形式传递过来，</div><div class="line">此方法需要前后端配合完成。</div><div class="line"></div><div class="line">    &lt;!--</div><div class="line">    当我们用script标签去加载的时候  会把内容解析成js去执行</div><div class="line">    --&gt;</div><div class="line">    &lt;script&gt;</div><div class="line">        function fuc(data)&#123;</div><div class="line">            console.log(data.name);</div><div class="line">        &#125;</div><div class="line">    &lt;/script&gt;</div><div class="line">    &lt;script src=&quot;http://www.guangzhou.com/api.php?callback=fuc&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JSONP/">JSONP</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Ajax-JSON" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -327,633 +1322,9 @@
 
 
   
-    <article id="post-Ajax-xml" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/14/Ajax-xml/" class="article-date">
-      <time datetime="2016-08-14T11:28:08.000Z" itemprop="datePublished">2016-08-14</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/14/Ajax-xml/">Ajax-xml</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">#### 8.3、 XML</div><div class="line"></div><div class="line">1、必须有一个根元素  </div><div class="line">2、不可有空格、不可以数字或.开头、大小写敏感  </div><div class="line">3、不可交叉嵌套  </div><div class="line">4、属性双引号（浏览器自动修正成双引号了）  </div><div class="line">5、特殊符号要使用实体  </div><div class="line">6、注释和HTML一样  </div><div class="line">虽然可以描述和传输复杂数据，但是其解析过于复杂并且体积较大，所以实现开发已经很少使用了。</div><div class="line">   </div><div class="line">```xml</div><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;root&gt;</div><div class="line">    &lt;arrayList&gt;</div><div class="line">        &lt;array&gt;</div><div class="line">            &lt;src&gt;images/banner.jpg&lt;/src&gt;</div><div class="line">            &lt;newPirce&gt;12.00&lt;/newPirce&gt;</div><div class="line">            &lt;oldPrice&gt;30.00&lt;/oldPrice&gt;</div><div class="line">        &lt;/array&gt;</div><div class="line">        &lt;array&gt;</div><div class="line">            &lt;src&gt;images/banner.jpg&lt;/src&gt;</div><div class="line">            &lt;newPirce&gt;12.00&lt;/newPirce&gt;</div><div class="line">            &lt;oldPrice&gt;30.00&lt;/oldPrice&gt;</div><div class="line">        &lt;/array&gt;</div><div class="line">    &lt;/arrayList&gt;</div><div class="line">&lt;/root&gt;</div></pre></td></tr></table></figure>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span> </div><div class="line">    header(<span class="string">'Content-Type:text/xml;charset=utf-8'</span>);</div><div class="line">    <span class="comment">/*以xml格式传输数据的时候要求响应内容格式是   text/xml*/</span></div><div class="line"></div><div class="line">    <span class="comment">/*file_get_contents 获取文件内容*/</span></div><div class="line">    $xml = file_get_contents(<span class="string">'01.xml'</span>);</div><div class="line"></div><div class="line">    <span class="comment">/*输出xml内容*/</span></div><div class="line">    <span class="keyword">echo</span> $xml;</div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest;</div><div class="line">xhr.open(<span class="string">'get'</span>,<span class="string">'01.php'</span>);</div><div class="line">xhr.send(<span class="literal">null</span>);</div><div class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(xhr.status == <span class="number">200</span> &amp;&amp; xhr.readyState == <span class="number">4</span>)&#123;</div><div class="line">        <span class="comment">/*获取到XML格式内容  放回的是DOM对象  document*/</span></div><div class="line">        <span class="keyword">var</span> xml = xhr.responseXML;</div><div class="line">        <span class="comment">/*通过选着器可以获取到xml的数据*/</span></div><div class="line">        <span class="built_in">console</span>.log(xml.querySelectorAll(<span class="string">'array'</span>)[<span class="number">0</span>].querySelector(<span class="string">'src'</span>).innerHTML);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>```</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XML/">XML</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Ajax入门3" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/11/Ajax入门3/" class="article-date">
-      <time datetime="2016-08-11T12:26:28.000Z" itemprop="datePublished">2016-08-11</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/11/Ajax入门3/">Ajax入门3</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">## 8、AJAX编程</div><div class="line"></div><div class="line">&gt;即 Asynchronous [e&apos;sɪŋkrənəs] Javascript And XML，</div><div class="line">AJAX 不是一门的新的语言，而是对现有技术的综合利用。</div><div class="line">&gt;本质是在HTTP协议的基础上以异步的方式与服务器进行通信。</div><div class="line">&gt;</div><div class="line"></div><div class="line">#### 8.1、 异步</div><div class="line"></div><div class="line">指某段程序执行时不会阻塞其它程序执行，其表现形式为程序的执行顺序不依赖程序本身的书写顺序，相反则为同步。</div><div class="line"></div><div class="line">**其优势在于不阻塞程序的执行，从而提升整体执行效率。**</div><div class="line"></div><div class="line">XMLHttpRequest可以以异步方式的处理程序。</div><div class="line"></div><div class="line">#### 8.2、 XMLHttpRequest</div><div class="line"></div><div class="line">浏览器内建对象，用于在后台与服务器通信(交换数据) ，</div><div class="line">由此我们便可实现对网页的部分更新，而不是刷新整个页面。</div><div class="line"></div><div class="line">```javascript</div><div class="line">    /*js 内置的 http 请求对象  XMLHttpRequest*/</div><div class="line"></div><div class="line">    /*1.怎么使用 这个内置对象*/</div><div class="line">    var xhr = new XMLHttpRequest;</div><div class="line"></div><div class="line">    /*2.怎么样去组请求*/</div><div class="line">    /*请求的行*/</div><div class="line">    xhr.open(&apos;post&apos;,&apos;01.php&apos;);</div><div class="line"></div><div class="line">    /*请求头*/</div><div class="line">    //get  没有必要设置</div><div class="line">    //post 必须设置 Content-Type: application/x-www-form-urlencoded</div><div class="line">    xhr.setRequestHeader(&apos;Content-Type&apos;,&apos;application/x-www-form-urlencoded&apos;);</div><div class="line"></div><div class="line">    /*请内容*/</div><div class="line">    /*3.发送请求*/</div><div class="line">    xhr.send(&quot;name=xjj&amp;age=10&quot;);</div></pre></td></tr></table></figure>
-<h5 id="8-2-1、请求"><a href="#8-2-1、请求" class="headerlink" title="8.2.1、请求"></a>8.2.1、请求</h5><p>HTTP请求3个组成部分与XMLHttpRequest方法的对应关系</p>
-<p>1、请求行</p>
-<pre><code>xhr.open(&apos;post&apos;,&apos;01.php&apos;);
-</code></pre><p>2、请求头</p>
-<pre><code>xhr.setRequestHeader(&apos;Content-Type&apos;,&apos;application/x-www-form-urlencoded&apos;);
-get请求可以不设置
-</code></pre><p>3、请求主体</p>
-<pre><code>xhr.send(&quot;name=xjj&amp;age=10&quot;);
-get可以传空
-</code></pre><p><strong>注意书写顺序</strong></p>
-<h5 id="8-2-2、响应"><a href="#8-2-2、响应" class="headerlink" title="8.2.2、响应"></a>8.2.2、响应</h5><p>HTTP响应是由服务端发出的，作为客户端更应关心的是响应的结果。</p>
-<p>HTTP响应3个组成部分与XMLHttpRequest方法或属性的对应关系。</p>
-<p>由于服务器做出响应需要时间（比如网速慢等原因），所以我们需要监听服务器响应的状态，然后才能进行处理。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(xhr.readyState == <span class="number">4</span> &amp;&amp; xhr.status == <span class="number">200</span>)&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'ok'</span>);</div><div class="line">    <span class="built_in">console</span>.log(xhr.responseText);</div><div class="line">    <span class="comment">/*把内容渲染在页面当中*/</span></div><div class="line">    <span class="built_in">document</span>.querySelector(<span class="string">'#result'</span>).innerHTML = xhr.responseText;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<pre><code>**readyState**
-0：请求未初始化（还没有调用 open()）。  
-1：请求已经建立，但是还没有发送（还没有调用 send()）。  
-2：请求已发送，正在处理中（通常现在可以从响应中获取内容头）。  
-3：请求在处理中；通常响应中已有部分数据可用了，但是服务器还没有完成响应的生成。  
-4：响应已完成；您可以获取并使用服务器的响应了。
-</code></pre><p>onreadystatechange是Javascript的事件的一种，其意义在于监听XMLHttpRequest的状态</p>
-<p>1、获取状态行（包括状态码&amp;状态信息）</p>
-<pre><code>xhr.status 状态码
-
-xhr.statusText 状态码信息
-</code></pre><p>2、获取响应头</p>
-<pre><code>xhr.getResponseHeader(&apos;Content-Type&apos;);
-xhr.getAllResponseHeaders();
-</code></pre><p>3、响应主体  </p>
-<pre><code>xhr.responseText
-xhr.responseXML
-</code></pre><p>我们需要检测并判断响应头的MIME类型后确定使用request.responseText或者request.responseXML</p>
-<h5 id="8-3-3、API详解"><a href="#8-3-3、API详解" class="headerlink" title="8.3.3、API详解"></a>8.3.3、API详解</h5><pre><code>xhr.open() 发起请求，可以是get、post方式
-xhr.setRequestHeader() 设置请求头
-xhr.send() 发送请求主体get方式使用xhr.send(null)
-xhr.onreadystatechange = function () {} 监听响应状态
-xhr.status表示响应码，如200
-xhr.statusText表示响应信息，如OK
-xhr.getAllResponseHeaders() 获取全部响应头信息
-xhr.getResponseHeader(&apos;key&apos;) 获取指定头信息
-xhr.responseText、xhr.responseXML都表示响应主体
-</code></pre><p> 注：GET和POST请求方式的差异（面试题）</p>
-<p> 1、GET没有请求主体，使用xhr.send(null)</p>
-<p> 2、GET可以通过在请求URL上添加请求参数</p>
-<p> 3、POST可以通过xhr.send(‘name=itcast&amp;age=10’)</p>
-<p> 4、POST需要设置</p>
-<p> 5、GET效率更好（应用多）</p>
-<p> 6、GET大小限制约4K，POST则没有限制</p>
-<p>```</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/">Ajax</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-HTTP-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/07/HTTP-1/" class="article-date">
-      <time datetime="2016-08-07T15:03:47.000Z" itemprop="datePublished">2016-08-07</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/07/HTTP-1/">HTTP-1</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div></pre></td><td class="code"><pre><div class="line">## 7、网络传输协议</div><div class="line"></div><div class="line">#### 7.1、常见协议</div><div class="line"></div><div class="line">1、HTTP、HTTPS 超文本传输协议 </div><div class="line"></div><div class="line">2、FTP 文件传输协议</div><div class="line"></div><div class="line">3、SMTP 简单邮件传输协议</div><div class="line"></div><div class="line">    </div><div class="line">#### 7.2、http协议</div><div class="line"></div><div class="line">超文本传输协议（HTTP，HyperText Transfer Protocol) 网站是基于HTTP协议的，</div><div class="line">例如网站的图片、CSS、JS等都是基于HTTP协议进行传输的。</div><div class="line"></div><div class="line">HTML  Hypertext Markup Language</div><div class="line"></div><div class="line">HTTP协议是由从客户机到服务器的请求(Request)和从服务器到客户机的响应(Response)进行了约束和规范。</div><div class="line"></div><div class="line">即HTTP协议主要由请求和响应构成。</div><div class="line"></div><div class="line">![](m_13.png)</div><div class="line"> </div><div class="line">常用请求方法 **POST**、**GET**、PUT、DELETE</div><div class="line"></div><div class="line">我们通过浏览器插件 FireFox httpFox  调试。ctrl shift f2 调用</div><div class="line"></div><div class="line"></div><div class="line">##### 7.2.1、请求和请求报文</div><div class="line"></div><div class="line">请求由客户端发起，其规范格式为：请求行、请求头、请求主体。</div><div class="line"></div><div class="line">- **1、请求行**</div><div class="line"> </div><div class="line">由请求方式、请求URL和协议版本构成</div><div class="line"></div><div class="line">    GET /day01/code/login.php?username=123&amp;password=123 HTTP/1.1</div><div class="line">    </div><div class="line">    POST /day01/code/login.php HTTP/1.1</div><div class="line"></div><div class="line">- **2、请求头**</div><div class="line"></div><div class="line">Host：localhost请求的主机</div><div class="line"></div><div class="line">Cache-Control：max-age=0控制缓存</div><div class="line"></div><div class="line">Accept：*/* 接受的文档MIME类型</div><div class="line"></div><div class="line">User-Agent：很重要</div><div class="line"></div><div class="line">Referer：从哪个URL跳转过来的</div><div class="line"></div><div class="line">Accept-Encoding：可接受的压缩格式</div><div class="line"></div><div class="line">If-None-Match：记录服务器响应的ETag值，用于控制缓存</div><div class="line"></div><div class="line">此值是由服务器自动生成的</div><div class="line"></div><div class="line">If-Modified-Since：记录服务器响应的Last-Modified值</div><div class="line"></div><div class="line">此值是由服务器自动生成的</div><div class="line"></div><div class="line">- **3、请求主体**</div><div class="line"></div><div class="line">即传递给服务端的数据</div><div class="line"></div><div class="line">注：当以post形式提交表单的时候，请求头里会设置</div><div class="line"></div><div class="line">Content-Type: application/x-www-form-urlencoded，以get形式当不需要</div><div class="line"></div><div class="line"></div><div class="line">##### 7.2.2、 响应和响应报文</div><div class="line"></div><div class="line">响应由服务器发出，其规范格式为：状态行、响应头、响应主体。</div><div class="line"></div><div class="line">- **1、状态行**</div><div class="line"> </div><div class="line">由协议版本号、状态码和状态信息构成</div><div class="line">    HTTP/1.1 200 OK</div><div class="line"></div><div class="line">- **2、响应头**</div><div class="line"></div><div class="line">Date：响应时间</div><div class="line"></div><div class="line">Server：服务器信息</div><div class="line"></div><div class="line">Last-Modified：资源最后修改时间 由服务器自动生成</div><div class="line"></div><div class="line">ETag：资源修改后生成的唯一标识</div><div class="line"></div><div class="line">由服务器自动生成</div><div class="line"></div><div class="line">Content-Length：响应主体长度</div><div class="line"></div><div class="line">Content-Type：响应资源的类型</div><div class="line"></div><div class="line">- **3、响应主体**</div><div class="line"></div><div class="line">即服务端返回给客户端的内容；</div><div class="line"></div><div class="line">- 状态码</div><div class="line"> </div><div class="line">常见的有200代表成功、304文档未修改、403没有权限、404未找到、500服务器错误</div><div class="line"></div><div class="line">![](get请求.png)</div><div class="line">![](post请求.png)</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTTP/">HTTP</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-PHP-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/29/PHP-1/" class="article-date">
-      <time datetime="2016-07-29T15:21:01.000Z" itemprop="datePublished">2016-07-29</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/29/PHP-1/">PHP-1</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">## 6、PHP基础</div><div class="line"></div><div class="line">&gt;文件以.php后缀结尾，所有程序包含在&lt;?php ** 这里是代码 ** ?&gt;  </div><div class="line">&gt;避免使用中文目录和中文文件名</div><div class="line">&gt;php页面无法直接打开需要运行在服务器环境当中</div><div class="line"></div><div class="line">#### 6.1、最简单的php程序</div><div class="line"></div><div class="line">```php</div><div class="line">&lt;?php</div><div class="line">	// 用来指定编码集</div><div class="line">	header(&apos;Content-Type:text/html; charset=utf-8&apos;);</div><div class="line">	/*这是一个最简单的php程序*/</div><div class="line">	echo &apos;hello world!&apos;;</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
-<h4 id="6-3、变量"><a href="#6-3、变量" class="headerlink" title="6.3、变量"></a>6.3、变量</h4><p>1、变量以$开头 字母/数字/下划线 不能以数字开头<br>2、大小写敏感（区分大小写）</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">// 声明一个变量$a并赋值为10</span></div><div class="line">  $a = <span class="number">10</span>;</div><div class="line"><span class="comment">// 输出一个变量$a</span></div><div class="line">  <span class="keyword">echo</span> $a;</div><div class="line">  <span class="comment">// 声明一个变量$b并赋值为10</span></div><div class="line">  $b = <span class="number">10</span>;</div><div class="line">  <span class="comment">// 输出一个变量$b</span></div><div class="line">  <span class="keyword">echo</span> $b;</div><div class="line">  </div><div class="line">  <span class="comment">// 输出顺序是自上向下的</span></div><div class="line">  <span class="comment">// 相当于 js dcoument.write()</span></div></pre></td></tr></table></figure>
-<h4 id="6-3、数据类型"><a href="#6-3、数据类型" class="headerlink" title="6.3、数据类型"></a>6.3、数据类型</h4><p><strong>字符型</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$str = <span class="string">'hello world!'</span>;</div></pre></td></tr></table></figure></p>
-<p><strong>整型</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$num = <span class="number">10</span>;</div></pre></td></tr></table></figure></p>
-<p><strong>浮点型</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$float = <span class="number">10.5</span>;</div></pre></td></tr></table></figure></p>
-<p><strong>布尔型</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$bool = <span class="keyword">true</span>;</div></pre></td></tr></table></figure></p>
-<p><strong>数组</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Javascript 数组定义方式 var arr = [1, 2, 3]</span></div><div class="line"><span class="comment">// arr[0]、arr[1]、arr[1]</span></div><div class="line"></div><div class="line"><span class="comment">// PHP 是这样定义数组的</span></div><div class="line"><span class="comment">// 这种方式叫做**索引数组**</span></div><div class="line">$arr = <span class="keyword">array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);	</div><div class="line"></div><div class="line"><span class="comment">// echo $arr[0];</span></div><div class="line"><span class="comment">// echo $arr[2];</span></div><div class="line"></div><div class="line"><span class="comment">// 定义方式和Javascript有区别，但是访问方式是一样的</span></div></pre></td></tr></table></figure></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// var obj = &#123;name: itcast, age: 10&#125;</span></div><div class="line"></div><div class="line"><span class="comment">// PHP另一种定定数组的方式，所表达的意义和Javascript一样，</span></div><div class="line"><span class="comment">// 只是语法格式不一样</span></div><div class="line"><span class="comment">// 这种方式叫做**关联数组**</span></div><div class="line">$arr1 = <span class="keyword">array</span>(<span class="string">'name'</span>=&gt;<span class="string">'itcast'</span>, <span class="string">'age'</span>=&gt;<span class="number">10</span>);</div><div class="line"></div><div class="line"><span class="comment">// echo $arr1['name'];</span></div><div class="line"><span class="comment">// echo $arr1['age'];</span></div></pre></td></tr></table></figure>
-<p><strong>对象</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Javascript var obj = &#123;name: itcast, age: 10&#125;</span></div><div class="line"><span class="comment">// PHP需要先创建一个类，下面就是创建过程</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> $name = <span class="string">'itcast'</span>;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> $age = <span class="number">10</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$person = <span class="keyword">new</span> Person;</div><div class="line"></div><div class="line"><span class="comment">// PHP访问一个对象属性的语法是不一样的</span></div><div class="line"><span class="keyword">echo</span> $person-&gt;name;</div><div class="line"></div><div class="line"><span class="comment">// obj['name']; obj.name 不行</span></div></pre></td></tr></table></figure></p>
-<p><strong>NULL</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//PHP中一种特殊的数据类型，表示空值，即表示没有为该变量设置任何值null(空值)不区分大小写，null和NULL是一样的。</span></div></pre></td></tr></table></figure></p>
-<p><strong>单引号&amp;双引号区别： </strong> 单引号内部的变量不会执行双引号会执行<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$name = <span class="string">'小明'</span>;</div><div class="line"></div><div class="line"><span class="keyword">echo</span> <span class="string">'name is $name'</span>;<span class="comment">//输出 name is $name</span></div><div class="line"><span class="keyword">echo</span> <span class="string">'&lt;br&gt;'</span>;</div><div class="line"><span class="keyword">echo</span> <span class="string">"name is $name"</span>;<span class="comment">//输出 name is 小明</span></div></pre></td></tr></table></figure></p>
-<p>索引数组、关联数组（了解即可）</p>
-<h4 id="6-4、运算符-amp-内容输出"><a href="#6-4、运算符-amp-内容输出" class="headerlink" title="6.4、运算符&amp;内容输出"></a>6.4、运算符&amp;内容输出</h4><pre><code>基本与Javascript语法一致  
-. 号表示字符串拼接符，Javascript中为+号
-</code></pre><p>echo：输出简单数据类型，如字符串、数值<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">* 连接符</div><div class="line">* Javascript中用+号表示连接符</div><div class="line">* PHP中使用.点号</div><div class="line">*/</div><div class="line"></div><div class="line">$hello = <span class="string">'hello'</span>;</div><div class="line"></div><div class="line">$world = <span class="string">'world!'</span>;</div><div class="line"></div><div class="line"><span class="comment">// PHP连接符用.号</span></div><div class="line"><span class="keyword">echo</span> $hello . <span class="string">' '</span> .$world;</div></pre></td></tr></table></figure></p>
-<p>print_r()：输出复杂数据类型，如数组<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$arr = <span class="keyword">array</span>(<span class="string">'itcast'</span>, <span class="string">'今年'</span>, <span class="string">'10岁了'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 只能输出简单类型</span></div><div class="line"><span class="keyword">echo</span> $arr;</div><div class="line"></div><div class="line"><span class="comment">// 可以打印数组，但是输出的是一个数组的结构</span></div><div class="line">print_r($arr);</div></pre></td></tr></table></figure></p>
-<p>var_dump()：输出详细信息，如对象、数组（了解）<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$arr = <span class="keyword">array</span>(<span class="string">'itcast'</span>, <span class="string">'今年'</span>, <span class="string">'10岁了'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 只能输出简单类型</span></div><div class="line"><span class="keyword">echo</span> $arr;</div><div class="line"></div><div class="line"><span class="comment">// 输出详细信息</span></div><div class="line">var_dump($arr);</div><div class="line"></div><div class="line">$hello = <span class="string">'hello'</span>;</div><div class="line"><span class="comment">// 输出详细信息</span></div><div class="line">var_dump($hello);</div></pre></td></tr></table></figure></p>
-<h4 id="6-5、函数"><a href="#6-5、函数" class="headerlink" title="6.5、函数"></a>6.5、函数</h4><p>基本与Javascript基本一致  </p>
-<p>函数名对大小写不敏感<br>默认参数（了解即可）  </p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">// 1、PHP中函数不可以省略参数</span></div><div class="line"><span class="comment">// 2、PHP可以设置默认参数</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHello</span><span class="params">($name=<span class="string">'web developer'</span>)</span> </span>&#123;</div><div class="line">	<span class="keyword">echo</span> $name . <span class="string">'你好!'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">sayHello();</div></pre></td></tr></table></figure>
-<h4 id="6-6、分支，循环语句"><a href="#6-6、分支，循环语句" class="headerlink" title="6.6、分支，循环语句"></a>6.6、分支，循环语句</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 分支控制语句、循环语句</div><div class="line"> * 与Javascript一样</div><div class="line"> * foreach 数组遍历函数，类似Javascript中的 for in</div><div class="line"> */</div><div class="line"> $name = <span class="string">'itcast1'</span>;</div><div class="line"> </div><div class="line"> <span class="keyword">if</span>($name == <span class="string">'itcast'</span>) &#123;</div><div class="line">    <span class="keyword">echo</span> <span class="string">'我已经在'</span> . $name . <span class="string">'学习'</span>;</div><div class="line"> &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">echo</span> <span class="string">'我还没有学习过编程'</span>;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 分支控制语句、循环语句</div><div class="line"> * 与Javascript一样</div><div class="line"> * foreach 数组遍历函数，类似Javascript中的 for in</div><div class="line"> */</div><div class="line"><span class="comment">// 索引数组</span></div><div class="line">$arr = <span class="keyword">array</span>(<span class="string">'itcast'</span>, <span class="string">'今年'</span>, <span class="string">'10岁了'</span>);</div><div class="line"> </div><div class="line"><span class="comment">// PHP函数，计算数组的长度</span></div><div class="line">$length = count($arr);</div><div class="line"> </div><div class="line"><span class="comment">// echo $length;</span></div><div class="line"> </div><div class="line"><span class="comment">// 和Javascript是一样的</span></div><div class="line"><span class="comment">// for($i=0; $i&lt;$length; $i++) &#123;</span></div><div class="line"><span class="comment">// 	echo $arr[$i];</span></div><div class="line"><span class="comment">// &#125;</span></div><div class="line"> </div><div class="line"><span class="keyword">foreach</span>($arr <span class="keyword">as</span> $k=&gt;$v) &#123;</div><div class="line">    <span class="keyword">echo</span> $k . <span class="string">'~~~'</span> . $v;</div><div class="line">&#125;;</div><div class="line"> </div><div class="line"><span class="comment">// 关联数组</span></div><div class="line">$arr1 = <span class="keyword">array</span>(<span class="string">'name'</span>=&gt;<span class="string">'itcast'</span>, <span class="string">'age'</span>=&gt;<span class="string">'10'</span>);</div><div class="line"> </div><div class="line"><span class="comment">// 验证关联数组不可以按索引下标来访问</span></div><div class="line"><span class="comment">// echo $arr1[0];</span></div><div class="line"> </div><div class="line"> <span class="comment">//PHP遍历一个关联数组</span></div><div class="line"> <span class="keyword">foreach</span>($arr1 <span class="keyword">as</span> $key=&gt;$val) &#123;</div><div class="line">    <span class="keyword">echo</span> $key . <span class="string">'~~~'</span> . $val;</div><div class="line"> &#125;</div><div class="line"> </div><div class="line"> <span class="comment">// 实际开发都是用foreach来遍历数组的</span></div></pre></td></tr></table></figure>
-<h4 id="6-7、表单处理"><a href="#6-7、表单处理" class="headerlink" title="6.7、表单处理"></a>6.7、表单处理</h4><p>表单name属性的是用来提供给服务端接收所传递数据而设置的 </p>
-<p>表单action属性设置接收数据的处理程序</p>
-<p>表单method属性设置发送数据的方式</p>
-<p>当上传文件是需要设置 enctype=”multipart/form-data”，且只能post方式</p>
-<p>$_GET接收 get 传值</p>
-<p>$_POST接收 post 传值</p>
-<p>$_FILES接收文件上传  </p>
-<pre><code>move_uploaded_file($_FILES[&apos;image&apos;][&apos;tmp_name&apos;], &apos;test.jpg&apos;);
-</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"login.php"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">label</span>&gt;</span>用户：<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">label</span>&gt;</span>密码：<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"登录"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"login.php"</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">label</span>&gt;</span>图片：<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"image"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"上传"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
-<h4 id="6-8、文件导入-amp-amp-常用php函数"><a href="#6-8、文件导入-amp-amp-常用php函数" class="headerlink" title="6.8、文件导入&amp;&amp;常用php函数"></a>6.8、文件导入&amp;&amp;常用php函数</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">include</span> <span class="string">'07.form.html'</span>;</div><div class="line"></div><div class="line"><span class="keyword">require</span> <span class="string">'07.form.php'</span></div></pre></td></tr></table></figure>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$array = <span class="keyword">array</span>(</div><div class="line">    <span class="string">'username'</span>=&gt;<span class="string">'itcast'</span>,</div><div class="line">    <span class="string">'password'</span>=&gt;<span class="string">'123456'</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="keyword">echo</span> <span class="string">'获取数组的长度：'</span>.count($array);</div><div class="line"><span class="keyword">echo</span> <span class="string">'&lt;br&gt;'</span>;</div><div class="line"><span class="keyword">echo</span> <span class="string">'判断是否在数组中：'</span>.in_array(<span class="string">'itcast'</span>,$array);</div><div class="line"><span class="keyword">echo</span> <span class="string">'&lt;br&gt;'</span>;</div><div class="line"><span class="keyword">echo</span> <span class="string">'检测数组中是否存在key：'</span>.array_key_exists(<span class="string">'username'</span>,$array);</div><div class="line"><span class="keyword">echo</span> <span class="string">'&lt;br&gt;'</span>;</div></pre></td></tr></table></figure>
-<p>```</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Ajax入门2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/27/Ajax入门2/" class="article-date">
-      <time datetime="2016-07-27T05:17:04.000Z" itemprop="datePublished">2016-07-27</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/27/Ajax入门2/">Ajax入门2</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">## 1、软件架构</div><div class="line"></div><div class="line">#### 1.1、C/S结构</div><div class="line"></div><div class="line">即**C**lient、**S**erver</div><div class="line"></div><div class="line">C/S工作流程图</div><div class="line"> </div><div class="line">![alt_text](m_01.png)</div><div class="line"> </div><div class="line">在C/S结构的情况下，不同的服务需要安装不同的客户端软件，</div><div class="line"></div><div class="line">比如QQ、迅雷、Foxmail这种情况下安装的软件会越来越多，同时也有许多弊端，</div><div class="line"></div><div class="line">比如A出差，需要在B电脑上查收邮件，但是B电脑并未安装Foxmail等类似的客户端软件，</div><div class="line"></div><div class="line">这样不得不先去下载Foxmail，非常不方便。</div><div class="line"></div><div class="line"></div><div class="line">#### 2.2、B/S结构</div><div class="line"></div><div class="line">B/S（即**B**roswer、**S**erver）解决了C/S所带来的不便，</div><div class="line"></div><div class="line">将所有的服务都可以通过浏览器来完成（因为基本所有浏览器都安装了浏览器），</div><div class="line"></div><div class="line">但B/S也有一些不利，比如操作稳定性、流畅度等方面相对较弱。</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/">Ajax</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Ajax入门" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/18/Ajax入门/" class="article-date">
-      <time datetime="2016-07-18T13:40:07.000Z" itemprop="datePublished">2016-07-18</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/18/Ajax入门/">Ajax入门</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div></pre></td><td class="code"><pre><div class="line"># http服务&amp;ajax编程</div><div class="line"></div><div class="line">## 1、服务器</div><div class="line"></div><div class="line">&gt; 前言：通俗的讲，能够提供某种服务的机器（计算机）称为服务器</div><div class="line"></div><div class="line">#### 1.1、服务器类型</div><div class="line"></div><div class="line">按照不同的划分标准，服务可划分为以下类型：</div><div class="line"></div><div class="line">1. 按**服务类型**可分为：文件服务器、数据库服务器、邮件服务器、Web服务器等；</div><div class="line">2. 按**操作系统**可分为：Linux服务器、Windows服务器等；</div><div class="line">3. 按**应用软件**可分为 Apache服务器、Nginx 服务器、IIS服务器、Tomcat服务器、</div><div class="line">   weblogic服务器、WebSphere服务器、boss服务器、 Node服务器等；</div><div class="line"></div><div class="line">#### 1.2、服务器软件</div><div class="line"></div><div class="line">使计算机具备提供某种服务能力的应用软件，称为服务器软件，</div><div class="line">通过安装相应的服务软件，然后进行配置后就可以使计算具备了提供某种服务的能力。</div><div class="line"></div><div class="line">常见的服务器软件有：</div><div class="line"></div><div class="line">1. 文件服务器：Server-U、FileZilla、VsFTP等（FTP是File Transfer Protocol文件传输协议）；</div><div class="line">2. 数据库服务器：oracle、mysql、SQL server、DB2、ACCESS等；</div><div class="line">3. 邮件服务器：Postfix、Sendmail等；</div><div class="line">4. **HTTP服务器**：Apache、Nginx、IIS、Tomcat、NodeJS等；</div><div class="line"></div><div class="line"></div><div class="line">#### 1.3、HTTP服务器</div><div class="line"></div><div class="line">即网站服务器，主要提供文档(文本、图片、视频、音频)浏览服务，一般安装Apache、Nginx服务器软件。</div><div class="line">  </div><div class="line">HTTP服务器可以结合某一编程语言处理业务逻辑，由此进行的开发，通常称之为**服务端开发**。 </div><div class="line"> </div><div class="line">常见的运行在服务端的编程语言包括 php、java、.net、Python、Ruby、Perl等。  </div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">## 2、客户端</div><div class="line"></div><div class="line">具有向服务器**索取服务**能力的终端，如比如 手机、电脑等，通过安装不同的客户端软件，</div><div class="line">可以获取不同的服务，比如通过QQ获得即时通讯服务、通过迅雷获得下载服务等。</div><div class="line"></div><div class="line">常见的客户端软件：浏览器、QQ、迅雷、Foxmail等。</div><div class="line"></div><div class="line">以浏览器为宿主环境，结合 HTML、CSS、Javascript等技术，而进行的一系列开发，通常称之为**前端开发**。</div><div class="line"></div><div class="line"></div><div class="line">## 3、网络基础</div><div class="line"></div><div class="line">#### 3.1 IP地址</div><div class="line"></div><div class="line">所谓IP地址就是给每个连接在互联网上的主机分配的一个32位地址。(就像每部手机能正常通话需要一个号码一样)</div><div class="line"></div><div class="line">查看本机IP地址 ping、ipconfig、ifconfig（linux）</div><div class="line"></div><div class="line"></div><div class="line">#### 3.2、域名</div><div class="line"></div><div class="line">由于IP地址基于数字，不方便记忆，于是便用域名来代替IP地址，域名是一个IP地址的“面具”  </div><div class="line"></div><div class="line">查看域名对应的IP地址 ping</div><div class="line"></div><div class="line"></div><div class="line">#### 3.3、DNS服务</div><div class="line"></div><div class="line">DNS（Domain Name System）因特网上作为域名和IP地址相互映射的一个分布式数据库，</div><div class="line">能够使用户更方便的访问互联网，而不用去记住能够被机器直接读取的IP数串。</div><div class="line"></div><div class="line">简单的说就是记录IP地址和域名之间对应关系的服务。</div><div class="line"></div><div class="line">查找优先级 本机hosts文件、DNS服务器</div><div class="line"></div><div class="line">ipconfig /flushdns 刷新DNS</div><div class="line"></div><div class="line"></div><div class="line">#### 3.4、端口</div><div class="line"></div><div class="line">端口号是计算机与外界通讯交流的出口，每个端口对应不同的服务。</div><div class="line"></div><div class="line">*现实生活中，银行不同的窗口办理不同的业务。*</div><div class="line"></div><div class="line">查看端口占用情况 netstat -an</div><div class="line"></div><div class="line">常见端口号 80、8080、3306、21、22</div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ajax/">Ajax</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-AngularJs入门3" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/10/AngularJs入门3/" class="article-date">
-      <time datetime="2016-07-10T14:41:36.000Z" itemprop="datePublished">2016-07-10</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/10/AngularJs入门3/">AngularJs入门3</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">1. 服务和依赖注入。</div><div class="line">	1. 依赖注入：Angularjs中某些回调函数的参数只认名字，不认顺序。参数的名字用的是服务的名字，只要在参数表里输入服务的名字，就能拿得到对应的服务对象。</div><div class="line">	2. 服务：类似于JQuery里面的extend，能把一些通用性的功能放到一个全局的“服务库”里。服务库里存储服务的方式是“服务名 -&gt; 服务”，给服务名，就能拿到服务对象。</div><div class="line">2. 控制器。</div><div class="line">	1. `app.controller`，Angularjs内部有个“控制器库”，“控制器库”里用“控制器名字 -&gt; 控制器函数”的方式存储着控制器，控制器本身的作用是“初始化别人给他的作用域对象”。</div><div class="line">	2. `ng-controller`，我给ng-controller指令一个控制器名，ng-controller指令就会自己创建一个作用域，然后用给定的控制器初始化作用域，并把作用域绑定到指定的标签上。</div><div class="line">3. 作用域</div><div class="line">	1. 有可能发生“数据变化了，但是Angularjs不知道”的情况，这种情况时，要调用$scope.$apply()来通知Angularjs。（什么时候用它？当你觉得自己的确更新数据了，而且控制台也没报错时，记得加个$scope.$apply()试试）</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJs/">AngularJs</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-AngularJs入门2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/05/AngularJs入门2/" class="article-date">
-      <time datetime="2016-07-05T02:21:53.000Z" itemprop="datePublished">2016-07-05</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/05/AngularJs入门2/">AngularJs入门2</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">## 服务与依赖注入</div><div class="line"></div><div class="line">服务就是AngularJs框架中用于定义通用功能的地方。它在功能上类似于jQuery的extend，但是使用方法上完全不同。</div><div class="line"></div><div class="line">AngularJs通过依赖注入的方式使用服务，也就是说，在`app.run( ... )`传入的回调函数的参数表中，直接写服务的名字来获取服务。（也就是之前所说的：只认名字、不认顺序）</div><div class="line"></div><div class="line">1. 应用：</div><div class="line">	1. 在`app.run`中使用AngularJs提供的`$location`服务。</div><div class="line">		1. 案例：实现一个简易的路由</div><div class="line">			1. 思考：如果实现一个路由，我们需要实现哪些功能。</div><div class="line">	2. 在`app.run`中使用AngularJs提供的`$http`服务。**重点**</div><div class="line">	3. 使用`app.service`或`app.factory`向AngularJs注册服务，并在`app.run`里通过依赖注入的方式使用它。搞清楚“服务的工厂函数”、“服务对象”和“依赖注入”之间的关系。</div><div class="line">	4. 依赖注入的两种写法。</div><div class="line"></div><div class="line">## 控制器与作用域。</div><div class="line"></div><div class="line">作用域是AngularJs框架中重要的“数据来源”，我们得先让作用域在某个标签上生效，然后才能在这个标签里书写双向绑定。</div><div class="line"></div><div class="line">而控制器则是为空的子作用域添加数据的常用方式。</div><div class="line"></div><div class="line">1. 应用：</div><div class="line">	1. 使用`app.controller( ... )`创建控制器，并用`ng-controller=&apos;...&apos;`指令将控制器绑定到HTML标签上。以这种方式，在`ng-app`标记的AngularJs根作用域里创建出`ng-controller`标记的子作用域。</div><div class="line">	2. 作用域具有可嵌套的特性。</div><div class="line">	3. 相同的AngularJs表达式在不同的作用域下会有不同的值。</div><div class="line">2. 注意事项：</div><div class="line">	1.  作用域属于`ng-controller`，而`app.controller( ... )`只是把一个函数交给AngularJs帮我们暂时存储起来，当`ng-controller`需要初始化作用域时，在调用这个函数。</div><div class="line">	2.  作用域之所以可嵌套，是因为它的底层机制借用了JavaScript的原型链。</div><div class="line">	3.  当AngularJs的数据绑定失效时，用`$scope.$apply`手动通知AngularJs更新界面。</div><div class="line">	4.  用`$scope.$watch`来监测作用域上指定表达式的值的变化，当变化发生时调用给定的回调函数。</div></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJs/">AngularJs</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-AngularJs入门1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/20/AngularJs入门1/" class="article-date">
-      <time datetime="2016-06-20T01:07:36.000Z" itemprop="datePublished">2016-06-20</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/20/AngularJs入门1/">AngularJs入门1</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">AngularJS是一款由Google公司开发维护的前端框架，其克服了HTML在构建应用上的诸多不足，从而降低了开发成本提升了开发效率。</div><div class="line"></div><div class="line">## 1 特点</div><div class="line"></div><div class="line">AngularJS与我们之前学习的jQuery是有一定的区别的。</div><div class="line"></div><div class="line">jQuery更准确来说只是一个库，封装了许多函数帮我们完成单独的功能，其核心思想是简化DOM操作时所使用的写法、帮我们做兼容性处理等。我们写代码时，思路还是自己的思路，只不过写法更简便了。</div><div class="line"></div><div class="line">AngularJS则一个框架，它帮我们搭建好了开发某类特定应用（网页）所需要的环境，我们写代码时需要以它规定的思路来写。那么，AngularJs的思路是什么呢？把界面和指定的数据对象同步起来，修改其中一方，另一方跟着改变。</div><div class="line"></div><div class="line">这种思路的代码可能一开始理解起来比较困难，但是它更加适合于构建复杂的、代码量更大的项目。</div><div class="line"></div><div class="line">## 2 下载与使用</div><div class="line"></div><div class="line">1. 下载</div><div class="line">	1. 从[官方网站](https://angularjs.org/)上下载。</div><div class="line">	2. 使用`npm install --save angular`命令。</div><div class="line">2. 使用</div><div class="line">	1. 引入`angularjs`文件</div><div class="line">	2. 用自定义属性`ng-app`来声明应用的边界，所谓的应用边界指的就是`angularjs`在网页上生效的范围。（自定义属性？）</div><div class="line"></div><div class="line">## 3 基础概念</div><div class="line"></div><div class="line">对比常规写法和AngularJs的写法，感受AngularJs框架带来的简便。</div><div class="line"></div><div class="line">实际上，AngularJs的思路很简单。</div><div class="line"></div><div class="line">常规情况下，我们想要修改页面上显示的内容，需要使用各种DOM操作。浏览器把显示在屏幕上的标签抽象成了一个个DOM对象，我们操作DOM对象的属性，就能控制屏幕上的标签。</div><div class="line"></div><div class="line">而AngularJs会在此基础上更进一步，它会把DOM对象上的部分属性，抽象到一个数据对象上，我们对这个数据对象进行操作，就能控制DOM对象，进一步控制页面显示。</div><div class="line"></div><div class="line">如图：</div><div class="line"></div><div class="line"></div><div class="line">![原生DOM操作更新界面和AngularJs更新界面的区别](/images/01.png)</div><div class="line"></div><div class="line">（注意：用AngularJs时，程序员只是操作对象而已，并没有操作DOM。）</div><div class="line"></div><div class="line">简单来讲，Angular的核心就在于**同步**二字上。</div><div class="line"></div><div class="line">什么是同步？两个事物建立起某种联系，一个发生变化，另外一个也就跟着发生变化。</div><div class="line"></div><div class="line">页面上的标签和DOM对象有联系，DOM对象和AngularJs提供的数据对象，也有联系。而且，这种联系如何建立起来，还是我们程序员来指定的。</div><div class="line"></div><div class="line">比如这段代码：</div><div class="line"></div><div class="line">	&lt;div&gt;</div><div class="line">		短消息：&lt;span ng-bind=&quot;data.msg&quot;&gt;&lt;/span&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line"></div><div class="line"></div><div class="line">我们就用`ng-bind`这个自定义属性，在`span`标签的内容和数据对象上`data.msg`这条数据联系到了一起，`data.msg`是什么，`span`标签里面就会显示什么。</div><div class="line"></div><div class="line">## 4 我的第一个AngularJs程序</div><div class="line"></div><div class="line">![](/images/02.png)</div><div class="line"></div><div class="line">## 5 AngularJs的指令</div><div class="line"></div><div class="line">所谓的指令，就是AngularJs“给某个标签打标记”的方式。不打标记，AngularJs就不知道如何去同步界面和数据，应该把数据同步到界面的什么地方上去。</div><div class="line"></div><div class="line">接下来，我们来学习一些用AngularJs在界面上打标记的方式。</div><div class="line"></div><div class="line">0. 作用域类：</div><div class="line">	1. ng-app</div><div class="line">1. 内容类：</div><div class="line">	1. ng-bind</div><div class="line">	2. 插值语法(&#123;&#123;&#125;&#125;)</div><div class="line">	3. ng-model</div><div class="line">2. 事件类：</div><div class="line">	1. ng-click、ng-dblclick</div><div class="line">	2. ng-blur、ng-focus等</div><div class="line">	3. 其他</div><div class="line">3. 样式类：</div><div class="line">	1. ng-class</div><div class="line">	2. ng-style</div><div class="line">	3. ng-hide与ng-show</div><div class="line">4. 仿流程控制类：</div><div class="line">	1. ng-if</div><div class="line">	2. ng-switch</div><div class="line">	3. ng-repeat</div><div class="line"></div><div class="line">##6 列表编辑小程序</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJs/">AngularJs</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
