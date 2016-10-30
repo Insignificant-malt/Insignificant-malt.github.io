@@ -15,12 +15,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="每天积累一点点，坚持下去，世界将因你而不凡">
-<meta property="og:url" content="http://yoursite.com/tags/AngularJs/index.html">
+<meta name="description" content="1234567891. 服务和依赖注入。	1. 依赖注入：Angularjs中某些回调函数的参数只认名字，不认顺序。参数的名字用的是服务的名字，只要在参数表里输入服务的名字，就能拿得到对应的服务对象。	2. 服务：类似于JQuery里面的extend，能把一些通用性的功能放到一个全局的“服务库”里。服务库里存储服务的方式是“服务名 -&amp;gt; 服务”，给服务名，就能拿到服务对象。2. 控制器。	1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AngularJs入门3">
+<meta property="og:url" content="http://yoursite.com/2016/07/10/AngularJs入门3/index.html">
 <meta property="og:site_name" content="每天积累一点点，坚持下去，世界将因你而不凡">
+<meta property="og:description" content="1234567891. 服务和依赖注入。	1. 依赖注入：Angularjs中某些回调函数的参数只认名字，不认顺序。参数的名字用的是服务的名字，只要在参数表里输入服务的名字，就能拿得到对应的服务对象。	2. 服务：类似于JQuery里面的extend，能把一些通用性的功能放到一个全局的“服务库”里。服务库里存储服务的方式是“服务名 -&amp;gt; 服务”，给服务名，就能拿到服务对象。2. 控制器。	1">
+<meta property="og:updated_time" content="2016-10-30T02:42:05.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="每天积累一点点，坚持下去，世界将因你而不凡">
+<meta name="twitter:title" content="AngularJs入门3">
+<meta name="twitter:description" content="1234567891. 服务和依赖注入。	1. 依赖注入：Angularjs中某些回调函数的参数只认名字，不认顺序。参数的名字用的是服务的名字，只要在参数表里输入服务的名字，就能拿得到对应的服务对象。	2. 服务：类似于JQuery里面的extend，能把一些通用性的功能放到一个全局的“服务库”里。服务库里存储服务的方式是“服务名 -&amp;gt; 服务”，给服务名，就能拿到服务对象。2. 控制器。	1">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -52,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Tag: AngularJs | 每天积累一点点，坚持下去，世界将因你而不凡</title>
+<title>AngularJs入门3 | 每天积累一点点，坚持下去，世界将因你而不凡</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -62,9 +66,9 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
-        isTag: true,
+        isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
@@ -276,89 +280,160 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-AngularJs入门3" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/06/20/AngularJs入门1/" class="archive-article-date">
-      <time datetime="2016-06-20T01:07:36.000Z" itemprop="datePublished">06-20</time>
+    <div class="article-meta">
+      <a href="/2016/07/10/AngularJs入门3/" class="article-date">
+      <time datetime="2016-07-10T14:41:36.000Z" itemprop="datePublished">2016-07-10</time>
 </a>
 
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/20/AngularJs入门1/">AngularJs入门1</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AngularJs入门3
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
           
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJs/">AngularJs</a></li></ul>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">1. 服务和依赖注入。</div><div class="line">	1. 依赖注入：Angularjs中某些回调函数的参数只认名字，不认顺序。参数的名字用的是服务的名字，只要在参数表里输入服务的名字，就能拿得到对应的服务对象。</div><div class="line">	2. 服务：类似于JQuery里面的extend，能把一些通用性的功能放到一个全局的“服务库”里。服务库里存储服务的方式是“服务名 -&gt; 服务”，给服务名，就能拿到服务对象。</div><div class="line">2. 控制器。</div><div class="line">	1. `app.controller`，Angularjs内部有个“控制器库”，“控制器库”里用“控制器名字 -&gt; 控制器函数”的方式存储着控制器，控制器本身的作用是“初始化别人给他的作用域对象”。</div><div class="line">	2. `ng-controller`，我给ng-controller指令一个控制器名，ng-controller指令就会自己创建一个作用域，然后用给定的控制器初始化作用域，并把作用域绑定到指定的标签上。</div><div class="line">3. 作用域</div><div class="line">	1. 有可能发生“数据变化了，但是Angularjs不知道”的情况，这种情况时，要调用$scope.$apply()来通知Angularjs。（什么时候用它？当你觉得自己的确更新数据了，而且控制台也没报错时，记得加个$scope.$apply()试试）</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/07/10/AngularJs入门3/">AngularJs入门3</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">尹春晖</a></p>
+        <p><span>发布时间:</span>2016-07-10, 22:41:36</p>
+        <p><span>最后更新:</span>2016-10-30, 10:42:05</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/10/AngularJs入门3/" title="AngularJs入门3">http://yoursite.com/2016/07/10/AngularJs入门3/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/10/AngularJs入门3/　　作者: 尹春晖" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/07/05/AngularJs入门2/">
+                    AngularJs入门2
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/06/05/hello-world/" class="archive-article-date">
-      <time datetime="2016-06-05T12:07:36.000Z" itemprop="datePublished">06-05</time>
-</a>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/06/05/hello-world/">小灰灰的播客</a>
-    </h1>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"AngularJs入门3　| 每天积累一点点，坚持下去，世界将因你而不凡　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
-        <div class="article-info info-on-archive">
-          
+    
+</div>
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJs/">AngularJs</a></li></ul>
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/07/05/AngularJs入门2/" title="下一篇: AngularJs入门2">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/10/AngularJs入门3/">AngularJs入门3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/05/AngularJs入门2/">AngularJs入门2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/20/AngularJs入门1/">AngularJs入门1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/07/seajs模块化开发/">JavaScript 模块化开发</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/05/hello-world/">小灰灰的播客</a></li></ul>
 
-    
 
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
