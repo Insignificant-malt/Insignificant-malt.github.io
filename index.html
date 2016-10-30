@@ -259,6 +259,61 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-AngularJs入门2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/05/AngularJs入门2/" class="article-date">
+      <time datetime="2016-07-05T02:21:53.000Z" itemprop="datePublished">2016-07-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/05/AngularJs入门2/">AngularJs入门2</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">## 服务与依赖注入</div><div class="line"></div><div class="line">服务就是AngularJs框架中用于定义通用功能的地方。它在功能上类似于jQuery的extend，但是使用方法上完全不同。</div><div class="line"></div><div class="line">AngularJs通过依赖注入的方式使用服务，也就是说，在`app.run( ... )`传入的回调函数的参数表中，直接写服务的名字来获取服务。（也就是之前所说的：只认名字、不认顺序）</div><div class="line"></div><div class="line">1. 应用：</div><div class="line">	1. 在`app.run`中使用AngularJs提供的`$location`服务。</div><div class="line">		1. 案例：实现一个简易的路由</div><div class="line">			1. 思考：如果实现一个路由，我们需要实现哪些功能。</div><div class="line">	2. 在`app.run`中使用AngularJs提供的`$http`服务。**重点**</div><div class="line">	3. 使用`app.service`或`app.factory`向AngularJs注册服务，并在`app.run`里通过依赖注入的方式使用它。搞清楚“服务的工厂函数”、“服务对象”和“依赖注入”之间的关系。</div><div class="line">	4. 依赖注入的两种写法。</div><div class="line"></div><div class="line">## 控制器与作用域。</div><div class="line"></div><div class="line">作用域是AngularJs框架中重要的“数据来源”，我们得先让作用域在某个标签上生效，然后才能在这个标签里书写双向绑定。</div><div class="line"></div><div class="line">而控制器则是为空的子作用域添加数据的常用方式。</div><div class="line"></div><div class="line">1. 应用：</div><div class="line">	1. 使用`app.controller( ... )`创建控制器，并用`ng-controller=&apos;...&apos;`指令将控制器绑定到HTML标签上。以这种方式，在`ng-app`标记的AngularJs根作用域里创建出`ng-controller`标记的子作用域。</div><div class="line">	2. 作用域具有可嵌套的特性。</div><div class="line">	3. 相同的AngularJs表达式在不同的作用域下会有不同的值。</div><div class="line">2. 注意事项：</div><div class="line">	1.  作用域属于`ng-controller`，而`app.controller( ... )`只是把一个函数交给AngularJs帮我们暂时存储起来，当`ng-controller`需要初始化作用域时，在调用这个函数。</div><div class="line">	2.  作用域之所以可嵌套，是因为它的底层机制借用了JavaScript的原型链。</div><div class="line">	3.  当AngularJs的数据绑定失效时，用`$scope.$apply`手动通知AngularJs更新界面。</div><div class="line">	4.  用`$scope.$watch`来监测作用域上指定表达式的值的变化，当变化发生时调用给定的回调函数。</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-AngularJs入门1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -298,6 +353,10 @@
       
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJs/">AngularJs</a></li></ul>
+    </div>
+
       
       <div class="clearfix"></div>
     </div>
