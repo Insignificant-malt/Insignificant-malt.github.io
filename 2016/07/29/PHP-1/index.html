@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="尹春晖" />
+
+
+
+<meta name="description" content="123456789101112131415## 6、PHP基础&amp;gt;文件以.php后缀结尾，所有程序包含在&amp;lt;?php ** 这里是代码 ** ?&amp;gt;  &amp;gt;避免使用中文目录和中文文件名&amp;gt;php页面无法直接打开需要运行在服务器环境当中#### 6.1、最简单的php程序```php&amp;lt;?php	// 用来指定编码集	header(&amp;apos;Content-Type:tex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP-1">
+<meta property="og:url" content="http://yoursite.com/2016/07/29/PHP-1/index.html">
+<meta property="og:site_name" content="每天积累一点点，坚持下去，世界将因你而不凡">
+<meta property="og:description" content="123456789101112131415## 6、PHP基础&amp;gt;文件以.php后缀结尾，所有程序包含在&amp;lt;?php ** 这里是代码 ** ?&amp;gt;  &amp;gt;避免使用中文目录和中文文件名&amp;gt;php页面无法直接打开需要运行在服务器环境当中#### 6.1、最简单的php程序```php&amp;lt;?php	// 用来指定编码集	header(&amp;apos;Content-Type:tex">
+<meta property="og:updated_time" content="2016-10-30T05:22:51.653Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PHP-1">
+<meta name="twitter:description" content="123456789101112131415## 6、PHP基础&amp;gt;文件以.php后缀结尾，所有程序包含在&amp;lt;?php ** 这里是代码 ** ?&amp;gt;  &amp;gt;避免使用中文目录和中文文件名&amp;gt;php页面无法直接打开需要运行在服务器环境当中#### 6.1、最简单的php程序```php&amp;lt;?php	// 用来指定编码集	header(&amp;apos;Content-Type:tex">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="每天积累一点点，坚持下去，世界将因你而不凡" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>PHP-1 | 每天积累一点点，坚持下去，世界将因你而不凡</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/me.fw.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">尹春晖</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="http://mail.163.com/js6/main.jsp" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="http://weibo.com/u/3263108690?refer_flag=1001030201_&is_all=1" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/Insignificant-malt/" title="GitHub"></a>
+                            
+                                <a class="fa 博客园" href="http://www.cnblogs.com/insignificant-malt/" title="博客园"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJs/">AngularJs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTTP/">HTTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSON/">JSON</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML/">XML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seaJs/">seaJs</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://git.oschina.net/">码云</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/">博客园</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">尹春晖</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/me.fw.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">尹春晖</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="http://mail.163.com/js6/main.jsp" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/u/3263108690?refer_flag=1001030201_&is_all=1" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Insignificant-malt/" title="GitHub"></a>
+                            
+                                <a class="fa 博客园" target="_blank" href="http://www.cnblogs.com/insignificant-malt/" title="博客园"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-PHP-1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/29/PHP-1/" class="article-date">
+      <time datetime="2016-07-29T15:21:01.000Z" itemprop="datePublished">2016-07-29</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      PHP-1
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">## 6、PHP基础</div><div class="line"></div><div class="line">&gt;文件以.php后缀结尾，所有程序包含在&lt;?php ** 这里是代码 ** ?&gt;  </div><div class="line">&gt;避免使用中文目录和中文文件名</div><div class="line">&gt;php页面无法直接打开需要运行在服务器环境当中</div><div class="line"></div><div class="line">#### 6.1、最简单的php程序</div><div class="line"></div><div class="line">```php</div><div class="line">&lt;?php</div><div class="line">	// 用来指定编码集</div><div class="line">	header(&apos;Content-Type:text/html; charset=utf-8&apos;);</div><div class="line">	/*这是一个最简单的php程序*/</div><div class="line">	echo &apos;hello world!&apos;;</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+<h4 id="6-3、变量"><a href="#6-3、变量" class="headerlink" title="6.3、变量"></a>6.3、变量</h4><p>1、变量以$开头 字母/数字/下划线 不能以数字开头<br>2、大小写敏感（区分大小写）</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">// 声明一个变量$a并赋值为10</span></div><div class="line">  $a = <span class="number">10</span>;</div><div class="line"><span class="comment">// 输出一个变量$a</span></div><div class="line">  <span class="keyword">echo</span> $a;</div><div class="line">  <span class="comment">// 声明一个变量$b并赋值为10</span></div><div class="line">  $b = <span class="number">10</span>;</div><div class="line">  <span class="comment">// 输出一个变量$b</span></div><div class="line">  <span class="keyword">echo</span> $b;</div><div class="line">  </div><div class="line">  <span class="comment">// 输出顺序是自上向下的</span></div><div class="line">  <span class="comment">// 相当于 js dcoument.write()</span></div></pre></td></tr></table></figure>
+<h4 id="6-3、数据类型"><a href="#6-3、数据类型" class="headerlink" title="6.3、数据类型"></a>6.3、数据类型</h4><p><strong>字符型</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$str = <span class="string">'hello world!'</span>;</div></pre></td></tr></table></figure></p>
+<p><strong>整型</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$num = <span class="number">10</span>;</div></pre></td></tr></table></figure></p>
+<p><strong>浮点型</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$float = <span class="number">10.5</span>;</div></pre></td></tr></table></figure></p>
+<p><strong>布尔型</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$bool = <span class="keyword">true</span>;</div></pre></td></tr></table></figure></p>
+<p><strong>数组</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Javascript 数组定义方式 var arr = [1, 2, 3]</span></div><div class="line"><span class="comment">// arr[0]、arr[1]、arr[1]</span></div><div class="line"></div><div class="line"><span class="comment">// PHP 是这样定义数组的</span></div><div class="line"><span class="comment">// 这种方式叫做**索引数组**</span></div><div class="line">$arr = <span class="keyword">array</span>(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);	</div><div class="line"></div><div class="line"><span class="comment">// echo $arr[0];</span></div><div class="line"><span class="comment">// echo $arr[2];</span></div><div class="line"></div><div class="line"><span class="comment">// 定义方式和Javascript有区别，但是访问方式是一样的</span></div></pre></td></tr></table></figure></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// var obj = &#123;name: itcast, age: 10&#125;</span></div><div class="line"></div><div class="line"><span class="comment">// PHP另一种定定数组的方式，所表达的意义和Javascript一样，</span></div><div class="line"><span class="comment">// 只是语法格式不一样</span></div><div class="line"><span class="comment">// 这种方式叫做**关联数组**</span></div><div class="line">$arr1 = <span class="keyword">array</span>(<span class="string">'name'</span>=&gt;<span class="string">'itcast'</span>, <span class="string">'age'</span>=&gt;<span class="number">10</span>);</div><div class="line"></div><div class="line"><span class="comment">// echo $arr1['name'];</span></div><div class="line"><span class="comment">// echo $arr1['age'];</span></div></pre></td></tr></table></figure>
+<p><strong>对象</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Javascript var obj = &#123;name: itcast, age: 10&#125;</span></div><div class="line"><span class="comment">// PHP需要先创建一个类，下面就是创建过程</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">    <span class="keyword">public</span> $name = <span class="string">'itcast'</span>;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> $age = <span class="number">10</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$person = <span class="keyword">new</span> Person;</div><div class="line"></div><div class="line"><span class="comment">// PHP访问一个对象属性的语法是不一样的</span></div><div class="line"><span class="keyword">echo</span> $person-&gt;name;</div><div class="line"></div><div class="line"><span class="comment">// obj['name']; obj.name 不行</span></div></pre></td></tr></table></figure></p>
+<p><strong>NULL</strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//PHP中一种特殊的数据类型，表示空值，即表示没有为该变量设置任何值null(空值)不区分大小写，null和NULL是一样的。</span></div></pre></td></tr></table></figure></p>
+<p><strong>单引号&amp;双引号区别： </strong> 单引号内部的变量不会执行双引号会执行<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$name = <span class="string">'小明'</span>;</div><div class="line"></div><div class="line"><span class="keyword">echo</span> <span class="string">'name is $name'</span>;<span class="comment">//输出 name is $name</span></div><div class="line"><span class="keyword">echo</span> <span class="string">'&lt;br&gt;'</span>;</div><div class="line"><span class="keyword">echo</span> <span class="string">"name is $name"</span>;<span class="comment">//输出 name is 小明</span></div></pre></td></tr></table></figure></p>
+<p>索引数组、关联数组（了解即可）</p>
+<h4 id="6-4、运算符-amp-内容输出"><a href="#6-4、运算符-amp-内容输出" class="headerlink" title="6.4、运算符&amp;内容输出"></a>6.4、运算符&amp;内容输出</h4><pre><code>基本与Javascript语法一致  
+. 号表示字符串拼接符，Javascript中为+号
+</code></pre><p>echo：输出简单数据类型，如字符串、数值<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">* 连接符</div><div class="line">* Javascript中用+号表示连接符</div><div class="line">* PHP中使用.点号</div><div class="line">*/</div><div class="line"></div><div class="line">$hello = <span class="string">'hello'</span>;</div><div class="line"></div><div class="line">$world = <span class="string">'world!'</span>;</div><div class="line"></div><div class="line"><span class="comment">// PHP连接符用.号</span></div><div class="line"><span class="keyword">echo</span> $hello . <span class="string">' '</span> .$world;</div></pre></td></tr></table></figure></p>
+<p>print_r()：输出复杂数据类型，如数组<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$arr = <span class="keyword">array</span>(<span class="string">'itcast'</span>, <span class="string">'今年'</span>, <span class="string">'10岁了'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 只能输出简单类型</span></div><div class="line"><span class="keyword">echo</span> $arr;</div><div class="line"></div><div class="line"><span class="comment">// 可以打印数组，但是输出的是一个数组的结构</span></div><div class="line">print_r($arr);</div></pre></td></tr></table></figure></p>
+<p>var_dump()：输出详细信息，如对象、数组（了解）<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$arr = <span class="keyword">array</span>(<span class="string">'itcast'</span>, <span class="string">'今年'</span>, <span class="string">'10岁了'</span>);</div><div class="line"></div><div class="line"><span class="comment">// 只能输出简单类型</span></div><div class="line"><span class="keyword">echo</span> $arr;</div><div class="line"></div><div class="line"><span class="comment">// 输出详细信息</span></div><div class="line">var_dump($arr);</div><div class="line"></div><div class="line">$hello = <span class="string">'hello'</span>;</div><div class="line"><span class="comment">// 输出详细信息</span></div><div class="line">var_dump($hello);</div></pre></td></tr></table></figure></p>
+<h4 id="6-5、函数"><a href="#6-5、函数" class="headerlink" title="6.5、函数"></a>6.5、函数</h4><p>基本与Javascript基本一致  </p>
+<p>函数名对大小写不敏感<br>默认参数（了解即可）  </p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">   <span class="comment">// 1、PHP中函数不可以省略参数</span></div><div class="line"><span class="comment">// 2、PHP可以设置默认参数</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHello</span><span class="params">($name=<span class="string">'web developer'</span>)</span> </span>&#123;</div><div class="line">	<span class="keyword">echo</span> $name . <span class="string">'你好!'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">sayHello();</div></pre></td></tr></table></figure>
+<h4 id="6-6、分支，循环语句"><a href="#6-6、分支，循环语句" class="headerlink" title="6.6、分支，循环语句"></a>6.6、分支，循环语句</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 分支控制语句、循环语句</div><div class="line"> * 与Javascript一样</div><div class="line"> * foreach 数组遍历函数，类似Javascript中的 for in</div><div class="line"> */</div><div class="line"> $name = <span class="string">'itcast1'</span>;</div><div class="line"> </div><div class="line"> <span class="keyword">if</span>($name == <span class="string">'itcast'</span>) &#123;</div><div class="line">    <span class="keyword">echo</span> <span class="string">'我已经在'</span> . $name . <span class="string">'学习'</span>;</div><div class="line"> &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">echo</span> <span class="string">'我还没有学习过编程'</span>;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * 分支控制语句、循环语句</div><div class="line"> * 与Javascript一样</div><div class="line"> * foreach 数组遍历函数，类似Javascript中的 for in</div><div class="line"> */</div><div class="line"><span class="comment">// 索引数组</span></div><div class="line">$arr = <span class="keyword">array</span>(<span class="string">'itcast'</span>, <span class="string">'今年'</span>, <span class="string">'10岁了'</span>);</div><div class="line"> </div><div class="line"><span class="comment">// PHP函数，计算数组的长度</span></div><div class="line">$length = count($arr);</div><div class="line"> </div><div class="line"><span class="comment">// echo $length;</span></div><div class="line"> </div><div class="line"><span class="comment">// 和Javascript是一样的</span></div><div class="line"><span class="comment">// for($i=0; $i&lt;$length; $i++) &#123;</span></div><div class="line"><span class="comment">// 	echo $arr[$i];</span></div><div class="line"><span class="comment">// &#125;</span></div><div class="line"> </div><div class="line"><span class="keyword">foreach</span>($arr <span class="keyword">as</span> $k=&gt;$v) &#123;</div><div class="line">    <span class="keyword">echo</span> $k . <span class="string">'~~~'</span> . $v;</div><div class="line">&#125;;</div><div class="line"> </div><div class="line"><span class="comment">// 关联数组</span></div><div class="line">$arr1 = <span class="keyword">array</span>(<span class="string">'name'</span>=&gt;<span class="string">'itcast'</span>, <span class="string">'age'</span>=&gt;<span class="string">'10'</span>);</div><div class="line"> </div><div class="line"><span class="comment">// 验证关联数组不可以按索引下标来访问</span></div><div class="line"><span class="comment">// echo $arr1[0];</span></div><div class="line"> </div><div class="line"> <span class="comment">//PHP遍历一个关联数组</span></div><div class="line"> <span class="keyword">foreach</span>($arr1 <span class="keyword">as</span> $key=&gt;$val) &#123;</div><div class="line">    <span class="keyword">echo</span> $key . <span class="string">'~~~'</span> . $val;</div><div class="line"> &#125;</div><div class="line"> </div><div class="line"> <span class="comment">// 实际开发都是用foreach来遍历数组的</span></div></pre></td></tr></table></figure>
+<h4 id="6-7、表单处理"><a href="#6-7、表单处理" class="headerlink" title="6.7、表单处理"></a>6.7、表单处理</h4><p>表单name属性的是用来提供给服务端接收所传递数据而设置的 </p>
+<p>表单action属性设置接收数据的处理程序</p>
+<p>表单method属性设置发送数据的方式</p>
+<p>当上传文件是需要设置 enctype=”multipart/form-data”，且只能post方式</p>
+<p>$_GET接收 get 传值</p>
+<p>$_POST接收 post 传值</p>
+<p>$_FILES接收文件上传  </p>
+<pre><code>move_uploaded_file($_FILES[&apos;image&apos;][&apos;tmp_name&apos;], &apos;test.jpg&apos;);
+</code></pre><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"login.php"</span> <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">label</span>&gt;</span>用户：<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">label</span>&gt;</span>密码：<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"password"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"登录"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"login.php"</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">enctype</span>=<span class="string">"multipart/form-data"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">label</span>&gt;</span>图片：<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"image"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"上传"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
+<h4 id="6-8、文件导入-amp-amp-常用php函数"><a href="#6-8、文件导入-amp-amp-常用php函数" class="headerlink" title="6.8、文件导入&amp;&amp;常用php函数"></a>6.8、文件导入&amp;&amp;常用php函数</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">include</span> <span class="string">'07.form.html'</span>;</div><div class="line"></div><div class="line"><span class="keyword">require</span> <span class="string">'07.form.php'</span></div></pre></td></tr></table></figure>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$array = <span class="keyword">array</span>(</div><div class="line">    <span class="string">'username'</span>=&gt;<span class="string">'itcast'</span>,</div><div class="line">    <span class="string">'password'</span>=&gt;<span class="string">'123456'</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="keyword">echo</span> <span class="string">'获取数组的长度：'</span>.count($array);</div><div class="line"><span class="keyword">echo</span> <span class="string">'&lt;br&gt;'</span>;</div><div class="line"><span class="keyword">echo</span> <span class="string">'判断是否在数组中：'</span>.in_array(<span class="string">'itcast'</span>,$array);</div><div class="line"><span class="keyword">echo</span> <span class="string">'&lt;br&gt;'</span>;</div><div class="line"><span class="keyword">echo</span> <span class="string">'检测数组中是否存在key：'</span>.array_key_exists(<span class="string">'username'</span>,$array);</div><div class="line"><span class="keyword">echo</span> <span class="string">'&lt;br&gt;'</span>;</div></pre></td></tr></table></figure>
+<p>```</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/07/29/PHP-1/">PHP-1</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">尹春晖</a></p>
+        <p><span>发布时间:</span>2016-07-29, 23:21:01</p>
+        <p><span>最后更新:</span>2016-10-30, 13:22:51</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/07/29/PHP-1/" title="PHP-1">http://yoursite.com/2016/07/29/PHP-1/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/29/PHP-1/　　作者: 尹春晖" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/08/07/HTTP-1/">
+                    HTTP-1
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/07/27/Ajax入门2/">
+                    Ajax入门2
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-3、变量"><span class="toc-number">1.</span> <span class="toc-text">6.3、变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-3、数据类型"><span class="toc-number">2.</span> <span class="toc-text">6.3、数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-4、运算符-amp-内容输出"><span class="toc-number">3.</span> <span class="toc-text">6.4、运算符&内容输出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-5、函数"><span class="toc-number">4.</span> <span class="toc-text">6.5、函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-6、分支，循环语句"><span class="toc-number">5.</span> <span class="toc-text">6.6、分支，循环语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-7、表单处理"><span class="toc-number">6.</span> <span class="toc-text">6.7、表单处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-8、文件导入-amp-amp-常用php函数"><span class="toc-number">7.</span> <span class="toc-text">6.8、文件导入&&常用php函数</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"PHP-1　| 每天积累一点点，坚持下去，世界将因你而不凡　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/08/07/HTTP-1/" title="上一篇: HTTP-1">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/07/27/Ajax入门2/" title="下一篇: Ajax入门2">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/20/Ajax-JSON/">Ajax-JSON</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/14/Ajax-xml/">Ajax-xml</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/11/Ajax入门3/">Ajax入门3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/07/HTTP-1/">HTTP-1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/29/PHP-1/">PHP-1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/27/Ajax入门2/">Ajax入门2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/18/Ajax入门/">Ajax入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/10/AngularJs入门3/">AngularJs入门3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/05/AngularJs入门2/">AngularJs入门2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/20/AngularJs入门1/">AngularJs入门1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/07/seajs模块化开发/">JavaScript 模块化开发</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/06/05/hello-world/">小灰灰的播客</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 尹春晖
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+             tags: ".article-tag a", 
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
